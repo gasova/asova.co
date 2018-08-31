@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>Asova.co | Résumé | Gökçe ASOVA </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/images/favicon.ico" rel="favicon"  type="image/x-icon"/>
+	<meta name="description" content="Gökçe ASOVA's  curicullum vitae. My professional experiences, education, portfolio about Computer Sciences and Engineering"/>
+	<meta name="author" content="Gökçe ASOVA"/>
+	<meta name="keywords" content="Gökçe, ASOVA, business, engineering, solutions, company, sciences, experiences, javascript, php, java, c, c++, .net, vb, ruby, ror, ruby on rails, rest, sql, pl-sql"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112412608-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-112412608-1');
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+	<script>
+		$(function(){
+			var t = document.getElementById("pie");
+			if (t) {
+				var c = new Date; 
+				var data = [{title: "Turkey (childhood)",y_start: 1977,y_end: 1984,color: "#62A9FF",},
+							{title: "Spain",y_start: 1984,y_end: 1990,color: "#75B4FF",},
+							{title: "France",y_start: 1990,y_end: 2005,color: "#86BCFF",},
+							{title: "Turkey",y_start: 2005,y_end: 2012,color: "#99C7FF",},
+							{title: "Belgium",y_start: 2012,y_end: 2014,color: "#99C7FF",},
+							{title: "Turkey",y_start: 2014,y_end: c.getFullYear(),color: "#A8CFFF",},
+						];
+				var b, k = 0, e = 0;
+				b = t.getContext("2d"),
+				b.clearRect(0, 0, t.width, t.height);
+				for (var t = 0; t < data.length; t++) {
+					e += data[t]["y_end"]-data[t]["y_start"];
+				}
+				for (var f = 0; f < data.length; f++)
+					b.fillStyle = data[f]["color"],
+					b.beginPath(),
+					b.arc(75, 75, 75, k, k + 2 * Math.PI * ((data[f]["y_end"]-data[f]["y_start"]) / e), !1),
+					b.lineTo(75, 75),
+					b.fill(),
+					k += 2 * Math.PI * ((data[f]["y_end"]-data[f]["y_start"]) / e);
+				b.save(),
+				b.translate(160, 20);
+				for (var y = 0, f = 0; f < data.length; f++) {
+						if (f != data.length - 1) {
+							year = data[f]["y_start"];
+						}
+						else {
+							year = "Since "+data[f]["y_start"];
+						}
+						b.beginPath(),
+						b.rect(0, y, 10, 10),
+						b.fillStyle = data[f]["color"],
+						b.closePath(),
+						b.fill(),
+						b.save(),
+						b.font = "9pt Arial",
+						b.textAlign = "left",
+						b.fillStyle = "grey",
+						b.fillText("["+year+"] " + data[f]["title"], 15, y + 10),
+						b.restore(),
+						y += 20;
+					}
+			}
+
+			var t = document.getElementById("SkillsCanvas");
+			if (t) {
+			
+			
+
+				var n = t.getContext("2d");
+				for (n.save(),
+				n.font = "8pt Arial",
+				n.fillStyle = "black",
+				n.textAlign = "left",
+				n.fillText("TECHNICAL SKILLS *", 0, 30),
+				n.save(),
+				n.fillStyle = "grey",
+				n.textAlign = "right",
+				n.fillText("* THIS LIST IS NOT EXHAUSTIVE.", 600, 30),
+				n.restore(),
+				n.translate(0, 40),
+				n.beginPath(),
+				n.moveTo(78, 200),
+				n.lineTo(78, 0),
+				n.strokeStyle = "#000",
+				n.lineWidth = .5,
+				n.stroke(),
+				n.beginPath(),
+				n.moveTo(78, 200),
+				n.lineTo(600, 200),
+				n.strokeStyle = "#000",
+				n.lineWidth = .5,
+				n.stroke(),
+				index = 20; index < 200; index += 40)
+					n.beginPath(),
+					n.moveTo(72, index),
+					n.lineTo(78, index),
+					n.strokeStyle = "#000",
+					n.lineWidth = .5,
+					n.stroke();
+				n.font = "8pt Arial",
+				n.fillStyle = "grey",
+				n.textAlign = "right",
+				n.fillText("Shit Hot", 70, 23),
+				n.fillText("Smokin'", 70, 63),
+				n.fillText("Pretty Good", 70, 103),
+				n.fillText("Rookie", 70, 143),
+				n.fillText("Slow & Steady", 70, 183);
+				var i = 81
+				  , o = 20
+				  , r = 197
+				  , s = 38
+				  , a = 38;
+				n.beginPath();
+				var l = 3
+				  , i = 81;
+				n.rect(i, o * l - 1, s, r - (o * l - 1)),
+				n.fillStyle = "#62A9FF",
+				n.fill(),
+				n.beginPath();
+				var l = 3
+				  , i = i + a + 2;
+				n.rect(i, o * l - 1, s, r - (o * l - 1)),
+				n.fillStyle = "#86BCFF",
+				n.fill(),
+				n.beginPath();
+				var l = 1
+				  , i = i + a + 2;
+				n.rect(i, o * l - 1, s, r - (o * l - 1)),
+				n.fillStyle = "#62A9FF",
+				n.fill(),
+				n.beginPath();
+				var l = 5
+				  , i = i + a + 2;
+				n.rect(i, o * l - 1, s, r - (o * l - 1)),
+				n.fillStyle = "#86BCFF",
+				n.fill(),
+				n.beginPath();
+				var l = 2
+				  , i = i + a + 2;
+				n.rect(i, o * l - 1, s, r - (o * l - 1)),
+				n.fillStyle = "#62A9FF",
+				n.fill(),
+				n.beginPath();
+				var l = 1
+				  , i = i + a + 2;
+				n.rect(i, o * l - 1, s, r - (o * l - 1)),
+				n.fillStyle = "#86BCFF",
+				n.fill(),
+				n.beginPath();
+				var l = 5
+				  , i = i + a + 2;
+				n.rect(i, o * l - 1, s, r - (o * l - 1)),
+				n.fillStyle = "#62A9FF",
+				n.fill(),
+				n.beginPath();
+				var l = 7
+				  , i = i + a + 2;
+				n.rect(i, o * l - 1, s, r - (o * l - 1)),
+				n.fillStyle = "#86BCFF",
+				n.fill(),
+				n.beginPath();
+				var l = 9
+				  , i = i + a + 2;
+				n.rect(i, o * l - 1, s, r - (o * l - 1)),
+				n.fillStyle = "#62A9FF",
+				n.fill(),
+				n.beginPath();
+				var l = 9
+				  , i = i + a + 2;
+				n.rect(i, o * l - 1, s, r - (o * l - 1)),
+				n.fillStyle = "#86BCFF",
+				n.fill(),
+				n.beginPath();
+				var l = 1
+				  , i = i + a + 2;
+				n.rect(i, o * l - 1, s, r - (o * l - 1)),
+				n.fillStyle = "#62A9FF",
+				n.fill(),
+				n.beginPath();
+				var l = 1
+				  , i = i + a + 2;
+				n.rect(i, o * l - 1, s, r - (o * l - 1)),
+				n.fillStyle = "#86BCFF",
+				n.fill(),
+				n.beginPath();
+				var l = 2
+				  , i = i + a + 2;
+				n.rect(i, o * l - 1, s, r - (o * l - 1)),
+				n.fillStyle = "#62A9FF",
+				n.fill(),
+				n.font = "8pt Arial",
+				n.fillStyle = "grey",
+				n.textAlign = "right";
+				var c = 100
+				  , u = new Array;
+				u[0] = "XHTML / HTML",
+				u[1] = "Javascript / AJAX",
+				u[2] = "PHP",
+				u[3] = "Ruby on Rails",
+				u[4] = "SQL / PL-SQL",
+				u[5] = "ASP / Vb / .NET",
+				u[6] = "Language C",
+				u[7] = "Obj-C",
+				u[8] = "Python",
+				u[9] = "Perl",
+				u[10] = "XML / XSL / SOAP",
+				u[11] = "UNIX / Linux / Os X",
+				u[12] = "Office / Adobe / ...";
+				for (var c = 102, f = 0; f < u.length; f++)
+					n.save(),
+					n.translate(c, 210),
+					n.rotate(-45),
+					n.fillText(u[f], 0, 0),
+					n.restore(),
+					c += 40;
+				var t = document.getElementById("timeline0");
+				if (t) {
+					var n = t.getContext("2d")
+					  , d = 80
+					  , p = 560
+					  , h = 40
+					  , g = 380;
+					n.save();
+					var v = new Image
+					  , m = new Image;
+					v.onload = function() {
+						n.drawImage(v, 0, 0)
+					}
+					,
+					m.onload = function() {
+						n.drawImage(m, 575, 0)
+					}
+					,
+					n.save(),
+					n.beginPath(),
+					n.rect(0, 0, p, d),
+					n.fillStyle = "#ccf",
+					n.fill(),
+					n.translate(p, 0),
+					n.beginPath(),
+					n.moveTo(0, 0),
+					n.lineTo(d / 2, d / 2),
+					n.lineTo(0, d),
+					n.restore(),
+					n.closePath(),
+					n.fillStyle = "#ccf",
+					n.fill(),
+					n.save(),
+					n.translate(40, 0),
+					n.beginPath(),
+					n.rect(0, h, g, h),
+					n.fillStyle = "#aae",
+					n.fill(),
+					n.translate(g, 2 * h),
+					n.beginPath(),
+					n.scale(1, -1),
+					n.moveTo(0, 0),
+					n.lineTo(0, h),
+					n.lineTo(h, h),
+					n.closePath(),
+					n.fillStyle = "#aae",
+					n.fill(),
+					n.restore(),
+					n.save(),
+					vYears = new Array(" ","...","1996","1997","1998","1999","2000","2002","2003","2005","..."," ");
+					var y = (p + 80) / vYears.length;
+					for (n.font = "8pt Arial",
+					n.fillStyle = "grey",
+					c = 41,
+					f = 0; f < vYears.length; f++)
+						n.save(),
+						n.translate(c, 34),
+						n.fillText(vYears[f], 0, 0),
+						n.restore(),
+						c += y;
+					n.save(),
+					c = 2,
+					n.save(),
+					n.translate(c, 13),
+					n.fillText("Born 22th Feb, 1977", 0, 0),
+					c += y,
+					n.restore(),
+					n.save(),
+					n.translate(40, 60),
+					n.save(),
+					n.fillStyle = "#666",
+					n.fillText("LT Fernand Holweck", 1, 0),
+					n.restore(),
+					n.beginPath(),
+					n.moveTo(2 * y + 10, -20),
+					n.lineTo(2 * y + 10, -10),
+					n.strokeStyle = "#ccc",
+					n.lineWidth = 2,
+					n.stroke(),
+					n.restore(),
+					n.save(),
+					c += y,
+					n.translate(c + 35, 60),
+					n.save(),
+					n.fillStyle = "#666",
+					n.fillText("LT Jacquard", 0, 0),
+					n.restore(),
+					n.save(),
+					n.fillStyle = "#000",
+					n.fillText("IBM", 10, 15),
+					n.fillText("SIPA", 40, 15),
+					n.fillText("ALCATEL", 90, 15),
+					n.fillText("SIPA", 160, 15),
+					n.fillText("MARSH", 320, 15),
+					n.restore(),
+					n.beginPath(),
+					c = 65,
+					n.moveTo(c, -20),
+					n.lineTo(c, -10),
+					n.strokeStyle = "#ccc",
+					n.lineWidth = 2,
+					n.stroke(),
+					n.restore(),
+					n.save(),
+					c = 8 * y,
+					n.translate(c + 10, 60),
+					n.save(),
+					n.fillStyle = "#666",
+					n.fillText("EPITA", 0, 0),
+					n.restore(),
+					n.beginPath(),
+					c = 35,
+					n.moveTo(c, -20),
+					n.lineTo(c, -10),
+					n.strokeStyle = "#ccc",
+					n.lineWidth = 2,
+					n.stroke(),
+					n.restore(),
+					n.save()
+				}
+			}
+			
+			var t = document.getElementById("lifeAtAGlance");
+			if (t) {
+				var n = t.getContext("2d");
+				n.translate(-180, 0),
+				n.globalAlpha = .4;
+				var $ = 250
+				  , D = 100
+				  , A = 70;
+				n.beginPath(),
+				n.arc($, D, A, 0, 2 * Math.PI, !1),
+				n.fillStyle = "#86BCFF",
+				n.fill(),
+				n.closePath();
+				var $ = 350
+				  , D = 100
+				  , A = 70;
+				for (n.beginPath(),
+				n.arc($, D, A, 0, 2 * Math.PI, !1),
+				n.fillStyle = "#86BCFF",
+				n.fill(),
+				n.closePath(),
+				n.save(),
+				n.globalAlpha = 1,
+				n.beginPath(),
+				f = 0; f <= 200; f += 10)
+					n.moveTo(300, f),
+					n.lineTo(300, f + 5);
+				n.lineWidth = 1,
+				n.strokeStyle = "grey",
+				n.stroke(),
+				n.closePath();
+				var v = new Image
+				  , m = new Image;
+				v.onload = function() {
+					n.drawImage(v, 330, 60)
+				}
+				,
+				m.onload = function() {
+					n.drawImage(m, 190, 60)
+				}
+				,
+				v.src = "assets/img/joystick.png",
+				m.src = "assets/img/hand.png",
+				n.globalAlpha = .6
+			}
+			
+			
+		});
+	</script>
+	<style>
+	
+	html {
+		-webkit-text-size-adjust: 100%;
+		font-variant-ligatures: none;
+		-webkit-font-variant-ligatures: none;
+		text-rendering: optimizeLegibility;
+		-moz-osx-font-smoothing: grayscale;
+		font-smoothing: antialiased;
+		-webkit-font-smoothing: antialiased;
+		text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+    }	
+	
+	body {
+		font-size:1rem;
+		color:#6e6e6e;
+		zoom: 1.25;
+		width:21.1cm;
+		height:29.97cm;
+		margin:0 auto;
+	}
+
+	h3 {
+		font-size:2rem;
+		font-weight:bold;
+		color: #62A9FF;
+	}
+
+	h4 {
+		font-size:1.5rem;
+		font-weight:bold;
+		color:#A8CFFF;
+	}
+
+	.wrapper-page {
+		margin: 0 auto;
+		
+		
+	}
+
+	.page {
+	  display:block;
+	  background-color:#fff;
+	  padding:0;
+	}
+
+	.row {
+		margin: 2%;
+	}
+
+	ul.experience,  ul.experience-alt {
+		list-style:none;
+		margin:2%;
+		padding:0;
+	}
+
+	ul.experience li {
+		padding:2%;
+		font-weight:bold;
+	}
+
+	ul.experience-alt li {
+		padding:0%;
+		font-weight:normal;
+	}
+
+	li.exp-comp {
+		font-weight:bold;
+	}
+
+	li.exp-desc {
+		color: #adadad;
+		font-weight:normal;
+	}
+
+	.wrapper {
+		position:relative;
+		top:0;
+		right:0;
+		margin:1%;
+		padding:0;
+		width:100px;
+		height:30px;
+		display:block;
+		float:right;
+	}
+
+	.social {
+		position:absolute;
+		top:0;
+		right:0;
+		width:150px;
+		text-align:right;
+	}
+
+	.social a{ 
+		color:#e6e6e6;
+	}
+	.social a:hover{ 
+		color:#666;
+	}
+	.footer {
+		margin-left:5mm;
+		margin-bottom:5mm;
+		
+	}
+
+    #SkillsCanvas {
+		zoom: .6;	
+		margin: 0 auto;
+    }
+
+    #pie {
+		zoom: .7;
+    }
+
+    #lifeAtAGlance {
+		zoom: .7;	
+		padding-top:7%;
+    }
+
+.col-print-1 {width:8%;  float:left;}
+.col-print-2 {width:16%; float:left;}
+.col-print-3 {width:25%; float:left;}
+.col-print-4 {width:33%; float:left;}
+.col-print-5 {width:42%; float:left;}
+.col-print-6 {width:50%; float:left;}
+.col-print-7 {width:58%; float:left;}
+.col-print-8 {width:66%; float:left;}
+.col-print-9 {width:75%; float:left;}
+.col-print-10{width:83%; float:left;}
+.col-print-11{width:92%; float:left;}
+.col-print-12{width:100%; float:left;}	
+	
+	@media (min-width: 375px) {
+		body {
+			font-size:1rem;
+			color:#6e6e6e;
+			zoom: 1.25;
+			width:100%;
+			height:100%;
+			margin:0 auto;
+		}
+		
+	}
+	@media print {
+		body {
+			font-size:1rem;
+			color:#6e6e6e;
+			zoom: 1.0;
+			width:21.1cm;
+			height:29.97cm;
+			margin:0 auto;
+			overflow:hidden;
+		}
+		.row, .wrapper {
+			margin:0;
+			padding:0;
+		}
+		.page {
+			margin-top:0;
+			padding:0;
+		}
+		
+		.container {
+			width: 100%; 
+		}
+		
+		.social {
+			display:none;
+		}
+		.XR01AB {
+			width:100%;
+			height:150px;
+		}
+		#pie {
+		float:right;
+		}
+		.footer {display:none;}
+		
+	}
+	
+	@media (min-width: 1200px) {
+		body {
+			font-size:1rem;
+			color:#6e6e6e;
+			zoom: 1.75;
+			width:21.1cm;
+			height:29.97cm;
+			margin:0 auto;
+		}
+	
+		.container {
+			width: 100%; 
+		}
+		
+	}
+</style>
+</head>
+<body style="background-color:#eee;">
+	<div class="center container">
+		<div class="page">
+			<div class="wrapper">
+				<div class="social">
+					<a href="skype:g.asova?call"><i class="fab fa-skype fa-3x"></i></a>&nbsp;
+					<a href="https://www.linkedin.com/in/gasova/"><i class="fab fa-linkedin fa-3x"></i></a>&nbsp;
+					<a href="https://www.facebook.com/gasova"><i class="fab fa-facebook-square fa-3x"></i></a>&nbsp;
+					<a href="https://www.twitter.com/asova"><i class="fab fa-twitter-square fa-3x"></i></a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-xs-12">
+					<h3>Gökçe ASOVA...</h3>
+				</div>
+				<div class="XR01AB">
+					<div class="col-md-6 col-xs-12 col-5 pull-left col-print-6">
+						<p>Born on Earth in 1977, and graduated From <a href="http://www.epita.fr/international/">EPITA</a> with a Computer Sciences Engineering Master Degree, in 2003.</p>
+						<p>Constantly honing my skills and my professional experiences. Since 2003 to Present.</p>
+						<p>I've seen things you wouldn't believe :) nor imagine...</p>
+					</div>
+					<div class="col-md-6 col-xs-12 col-7 col-print-6">
+						<canvas height="150" id="pie" width="400"></canvas>
+					</div>
+				</div>
+				<div class="col-md-12 col-xs-12 col-12">
+					<h3>Life at a Glance!</h3>
+				</div>
+				<div class="col-md-4 col-xs-4 pull-left"> 					
+						<h4>Interacting</h4> 					
+						<p>Requirements / Meetings / Training / Helping</p> 					
+						<h4>Thinking</h4> 				  
+						<p>New Ideas / Learning / Planning / Problem Solving</p> 					
+						<h4>Implementing</h4> 					
+						<p>Coding / Creating / Experimenting</p> 					
+						<h4>Reviewing</h4> 					
+						<p>Testing / Improving / Documenting / Correcting</p> 				
+				</div>
+				<div class="col-md-4 col-xs-4 text-center" style="margin-top:2%;"> 					
+					<canvas height="200" id="lifeAtAGlance">Canvas not supported.</canvas>
+				</div>
+				<div class="col-md-4 col-xs-4 pull-right">
+					<h4>Socialising</h4>
+					<p>Friends / Trips / Cinema / Dinner / Parties</p>
+					<h4>Holidays</h4>
+					<p>New Destinations / New Experiences / Exploring / Sun</p>
+					<h4>Hobbies</h4>
+					<p>Driving / Reading / Walk / Listen to Music / Space / Sci-Fi</p>
+					<h4>Downtime</h4>
+					<p>Sleeping / Hot Baths / Dreaming / Staying at Home</p>
+				</div>			
+			</div>
+			<div class="row">
+				<h3>Profesional Experiences</h3>
+				<div class="col-md-5 col-xs-5">
+					<ul class="experience">
+						<li>Senior Software Engineer
+							<ul class="experience-alt">
+								<li class="exp-comp">GAMA Power Systems Engineering and Contracting, Inc.</li>
+								<li class="exp-desc">Jul 2017 – Present</li>
+								<li class="exp-desc">Ankara, Turkey</li>
+								<li class="exp-desc">Fullstack development of business solutions, ERP integration</li>
+							</ul>
+						</li>
+						<li>Project Lead
+							<ul class="experience-alt">
+								<li class="exp-comp">Anadolubank</li>
+								<li class="exp-desc">Oct 2015 – Jun 2017</li>
+								<li class="exp-desc">Istanbul, Turkey</li>
+								<li class="exp-desc">Succeeded in achieving companies goals in integrating financial control solutions and increased client business oportunities.</li>
+							</ul>
+						</li>
+						<li>Software Development Manager
+							<ul class="experience-alt">
+								<li class="exp-comp">CMC Turkey</li>
+								<li class="exp-desc">Sep 2014 – Sep 2015</li>
+								<li class="exp-desc">Istanbul, Turkey</li>
+								<li class="exp-desc">Helped the company to enhance their Business Intelligence needs by integrating in-house client solutions</li>
+							</ul>
+						</li>
+						<li>Business Analyst / IT Executive
+							<ul class="experience-alt">
+								<li class="exp-comp">Marsh&amp;McLennan</li>
+								<li class="exp-desc">Sep 2012 – Sep 2014</li>
+								<li class="exp-desc">Brussels, Belgium</li>
+								<li class="exp-desc">Succeeded on allowing the company to grow it's business by analysing needs and developping client products</li>
+							</ul>
+						</li>
+						<li>Developer / IT Executive
+							<ul class="experience-alt">
+								<li class="exp-comp">Marsh&amp;McLennan</li>
+								<li class="exp-desc">Oct 2005 – Sep 2012</li>
+								<li class="exp-desc">Intanbul, Turkey</li>
+								<li class="exp-desc">Allowed the company to grow it's business and client satisfaction by developping in-house client solutions. </li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-7 col-xs-7">
+					<h3>Profile</h3>
+					<p>A creative, enthusiastic, versatile, open-minded human with love for familly, and interrests in sciences, technology and engineering.</p>
+					<h3>Eduction</h3>
+					<p><a href="http://www.epita.fr/international/">EPITA</a>, Master Degree on Computer Sciences and Engineering (2003 graduate).</p>
+					<h3>Skills</h3>
+					<p class="text-center">
+						<canvas height="330" id="SkillsCanvas" width="600">Canvas not supported.</canvas>
+					</p>
+					<p>Even non exhaustive, I'm used to work with Linux, Unix,Mac OS, Windows; Develop in Language C, C++, PHP, Javascript, Java, Html; Do Technical Analysis, Business Analysis, Document Management, and much more...  </p>
+				</div>
+			</div>
+			<div class="footer">&copy; 2010-2018 BY-NC-SA | ASOVA.CO</div>
+		</div>
+	</div>
+</body>
+</html>
