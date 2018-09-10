@@ -702,7 +702,10 @@
 					<p>Even non exhaustive, I'm used to work with Linux, Unix,Mac OS, Windows; Develop in Language C, C++, PHP, Javascript, Java, Html; Do Technical Analysis, Business Analysis, Document Management, and much more...  </p>
 				</div>
 			</div>
-			<div class="footer">&copy; 2010-2018 BY-NC-SA | ASOVA.CO</div>
+			<div class="footer">&copy; 2010-<span id="cYear"></span> BY-NC-SA | ASOVA.CO</div>
+			<script>
+				$("#cYear").html((new Date()).getFullYear());
+			</script>
 		</div>
 	</div>
 </body>
