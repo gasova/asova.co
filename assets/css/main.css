@@ -25,7 +25,7 @@ h4 {
 }
 
 h5 {
-  font-size:1rem;
+  font-size:.8rem;
   font-weight:bold;
   color:#A8CFFF;
 }
@@ -45,12 +45,12 @@ h5 {
 
 ul.experience,  ul.experience-alt {
   list-style:none;
-  margin:2%;
+  margin:0;
   padding:0;
 }
 
 ul.experience li {
-  padding:2%;
+  padding:0 2%;
   font-weight:bold;
 }
 
@@ -58,6 +58,13 @@ ul.experience-alt li {
   padding:0%;
   font-weight:normal;
 }
+
+ul.experiences > li {
+  list-style:none;
+  margin:0;
+  padding: 2% 0;
+}
+
 
 li.exp-comp {
   font-weight:bold;
