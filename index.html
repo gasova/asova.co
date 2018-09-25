@@ -8,23 +8,23 @@
     <meta name="description" content="Gökçe ASOVA's  curicullum vitae. My professional experiences, education, portfolio about Computer Sciences and Engineering"/>
     <meta name="author" content="Gökçe ASOVA"/>
     <meta name="keywords" content="Gökçe, ASOVA, business, engineering, solutions, company, sciences, experiences, javascript, php, java, c, c++, .net, vb, ruby, ror, ruby on rails, rest, sql, pl-sql"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="./assets/css/foundation.min.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112412608-1"></script>
     <script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-112412608-1');
+	    window.dataLayer = window.dataLayer || [];
+	    function gtag(){dataLayer.push(arguments);}
+	    gtag('js', new Date());
+  	  gtag('config', 'UA-112412608-1');
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="./assets/js/vendor/foundation.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
     <script>
 		$(function(){
 			var t = document.getElementById("pie");
 			if (t) {
-				var c = new Date; 
+				var c = new Date;
 				var data = [{title: "Turkey (childhood)",y_start: 1977,y_end: 1984,color: "#62A9FF",},
 							{title: "Spain",y_start: 1984,y_end: 1990,color: "#75B4FF",},
 							{title: "France",y_start: 1990,y_end: 2005,color: "#86BCFF",},
@@ -71,8 +71,8 @@
 
 			var t = document.getElementById("SkillsCanvas");
 			if (t) {
-			
-			
+
+
 
 				var n = t.getContext("2d");
 				for (n.save(),
@@ -342,7 +342,7 @@
 					n.save()
 				}
 			}
-			
+
 			var t = document.getElementById("lifeAtAGlance");
 			if (t) {
 				var n = t.getContext("2d");
@@ -388,265 +388,87 @@
 				m.src = "assets/img/hand.png",
 				n.globalAlpha = .6
 			}
-			
-			
+
+
 		});
 	</script>
 	<style>
-	
-	html {
-		-webkit-text-size-adjust: 100%;
-		font-variant-ligatures: none;
-		-webkit-font-variant-ligatures: none;
-		text-rendering: optimizeLegibility;
-		-moz-osx-font-smoothing: grayscale;
-		font-smoothing: antialiased;
-		-webkit-font-smoothing: antialiased;
-		text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
-    }	
-	
-	body {
-		font-size:1rem;
-		color:#6e6e6e;
-		zoom: 1.25;
-		width:21.1cm;
-		height:29.97cm;
-		margin:0 auto;
-	}
-
-	h3 {
-		font-size:2rem;
-		font-weight:bold;
-		color: #62A9FF;
-	}
-
-	h4 {
-		font-size:1.5rem;
-		font-weight:bold;
-		color:#A8CFFF;
-	}
-
-	.wrapper-page {
-		margin: 0 auto;
-		
-		
-	}
-
-	.page {
-	  display:block;
-	  background-color:#fff;
-	  padding:0;
-	}
-
-	.row {
-		margin: 2%;
-	}
-
-	ul.experience,  ul.experience-alt {
-		list-style:none;
-		margin:2%;
-		padding:0;
-	}
-
-	ul.experience li {
-		padding:2%;
-		font-weight:bold;
-	}
-
-	ul.experience-alt li {
-		padding:0%;
-		font-weight:normal;
-	}
-
-	li.exp-comp {
-		font-weight:bold;
-	}
-
-	li.exp-desc {
-		color: #adadad;
-		font-weight:normal;
-	}
-
-	.wrapper {
-		position:relative;
-		top:0;
-		right:0;
-		margin:1%;
-		padding:0;
-		width:100px;
-		height:30px;
-		display:block;
-		float:right;
-	}
-
-	.social {
-		position:absolute;
-		top:0;
-		right:0;
-		width:200px;
-		text-align:right;
-	}
-
-	.social a{ 
-		color:#e6e6e6;
-	}
-	.social a:hover{ 
-		color:#666;
-	}
-	.footer {
-		margin-left:5mm;
-		margin-bottom:5mm;
-		
-	}
-
-    #SkillsCanvas {
-		zoom: .6;	
-		margin: 0 auto;
-    }
-
-    #pie {
-		zoom: .7;
-    }
-
-    #lifeAtAGlance {
-		zoom: .7;	
-		padding-top:7%;
-    }
-
-.col-print-1 {width:8%;  float:left;}
-.col-print-2 {width:16%; float:left;}
-.col-print-3 {width:25%; float:left;}
-.col-print-4 {width:33%; float:left;}
-.col-print-5 {width:42%; float:left;}
-.col-print-6 {width:50%; float:left;}
-.col-print-7 {width:58%; float:left;}
-.col-print-8 {width:66%; float:left;}
-.col-print-9 {width:75%; float:left;}
-.col-print-10{width:83%; float:left;}
-.col-print-11{width:92%; float:left;}
-.col-print-12{width:100%; float:left;}	
-	
-	@media (min-width: 375px) {
-		body {
-			font-size:1rem;
-			color:#6e6e6e;
-			zoom: 1.25;
-			width:100%;
-			height:100%;
-			margin:0 auto;
-		}
-		
-	}
-	@media print {
-		body {
-			font-size:1rem;
-			color:#6e6e6e;
-			zoom: 1.0;
-			width:21.1cm;
-			height:29.97cm;
-			margin:0 auto;
-			overflow:hidden;
-		}
-		.row, .wrapper {
-			margin:0;
-			padding:0;
-		}
-		.page {
-			margin-top:0;
-			padding:0;
-		}
-		
-		.container {
-			width: 100%; 
-		}
-		
-		.social {
-			display:none;
-		}
-		.XR01AB {
-			width:100%;
-			height:150px;
-		}
-		#pie {
-		float:right;
-		}
-		.footer {display:none;}
-		
-	}
-	
-	@media (min-width: 1200px) {
-		body {
-			font-size:1rem;
-			color:#6e6e6e;
-			zoom: 1.75;
-			width:21.1cm;
-			height:29.97cm;
-			margin:0 auto;
-		}
-	
-		.container {
-			width: 100%; 
-		}
-		
-	}
 </style>
 </head>
 <body style="background-color:#eee;">
 	<div class="center container">
 		<div class="page">
-			<div class="wrapper">
-				<div class="social">
-					<a href="https://github.com/gasova"><i class="fab fa-github fa-3x"></i></a>&nbsp;
-					<a href="skype:g.asova?call"><i class="fab fa-skype fa-3x"></i></a>&nbsp;
-					<a href="https://www.linkedin.com/in/gasova/"><i class="fab fa-linkedin-in fa-3x"></i></a>&nbsp;
-					<a href="https://www.facebook.com/gasova"><i class="fab fa-facebook fa-3x"></i></a>&nbsp;
-					<a href="https://www.twitter.com/asova"><i class="fab fa-twitter fa-3x"></i></a>
+			<div class="grid-x">
+				<div class="cell small-6">
+					<h4>Gökçe ASOVA...</h4>
+				</div>
+				<div class="cell small-6">
+					<div class="social">
+						<a href="https://github.com/gasova"><i class="fab fa-github fa-3x"></i></a>&nbsp;
+						<a href="skype:g.asova?call"><i class="fab fa-skype fa-3x"></i></a>&nbsp;
+						<a href="https://www.linkedin.com/in/gasova/"><i class="fab fa-linkedin-in fa-3x"></i></a>&nbsp;
+						<a href="https://www.facebook.com/gasova"><i class="fab fa-facebook fa-3x"></i></a>&nbsp;
+						<a href="https://www.twitter.com/asova"><i class="fab fa-twitter fa-3x"></i></a>
+					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-12 col-xs-12">
-					<h3>Gökçe ASOVA...</h3>
+			<div class="grid-x">
+				<div class="cell small-8">
+							<p>Born on Earth in 1977, and graduated From <a href="http://www.epita.fr/international/">EPITA</a> with a Computer Sciences Engineering Master Degree, in 2003.</p>
+							<p>Constantly honing my skills and my professional experiences. Since 2003 to Present.</p>
+							<p>I've seen things you wouldn't believe :) nor imagine...</p>
 				</div>
-				<div class="XR01AB">
-					<div class="col-md-6 col-xs-12 col-5 pull-left col-print-6">
-						<p>Born on Earth in 1977, and graduated From <a href="http://www.epita.fr/international/">EPITA</a> with a Computer Sciences Engineering Master Degree, in 2003.</p>
-						<p>Constantly honing my skills and my professional experiences. Since 2003 to Present.</p>
-						<p>I've seen things you wouldn't believe :) nor imagine...</p>
-					</div>
-					<div class="col-md-6 col-xs-12 col-7 col-print-6">
-						<canvas height="150" id="pie" width="400"></canvas>
-					</div>
+				<div class="cell small-4">
+					<canvas height="150" id="pie" width="400"></canvas>
 				</div>
-				<div class="col-md-12 col-xs-12 col-12">
-					<h3>Life at a Glance!</h3>
+			</div>
+			<div class="grid-x">
+				<div class="cell">
+					<h4>Life at a Glance!</h4>
 				</div>
-				<div class="col-md-4 col-xs-4 pull-left"> 					
-						<h4>Interacting</h4> 					
-						<p>Requirements / Meetings / Training / Helping</p> 					
-						<h4>Thinking</h4> 				  
-						<p>New Ideas / Learning / Planning / Problem Solving</p> 					
-						<h4>Implementing</h4> 					
-						<p>Coding / Creating / Experimenting</p> 					
-						<h4>Reviewing</h4> 					
-						<p>Testing / Improving / Documenting / Correcting</p> 				
+			</div>
+			<div class="grid-x">
+				<div class="cell small-4">
+					<h5>Interacting</h5>
+					<p>Requirements / Meetings / Training / Helping</p>
+					<h5>Thinking</h5>
+					<p>New Ideas / Learning / Planning / Problem Solving</p>
+					<h5>Implementing</h5>
+					<p>Coding / Creating / Experimenting</p>
+					<h5>Reviewing</h5>
+					<p>Testing / Improving / Documenting / Correcting</p>
 				</div>
-				<div class="col-md-4 col-xs-4 text-center" style="margin-top:2%;"> 					
+				<div class="cell small-4">
 					<canvas height="200" id="lifeAtAGlance">Canvas not supported.</canvas>
 				</div>
-				<div class="col-md-4 col-xs-4 pull-right">
-					<h4>Socialising</h4>
+				<div class="cell small-4">
+					<h5>Socialising</h5>
 					<p>Friends / Trips / Cinema / Dinner / Parties</p>
-					<h4>Holidays</h4>
+					<h5>Holidays</h5>
 					<p>New Destinations / New Experiences / Exploring / Sun</p>
-					<h4>Hobbies</h4>
+					<h5>Hobbies</h5>
 					<p>Driving / Reading / Walk / Listen to Music / Space / Sci-Fi</p>
-					<h4>Downtime</h4>
+					<h5>Downtime</h5>
 					<p>Sleeping / Hot Baths / Dreaming / Staying at Home</p>
-				</div>			
+				</div>
 			</div>
-			<div class="row">
-				<h3>Profesional Experiences</h3>
-				<div class="col-md-5 col-xs-5">
+			<div class="grid-x">
+				<div class="cell">
+					<br />
+					<br />
+					<br />
+				</div>
+			</div>
+			<div class="grid-x">
+				<div class="cell small-6">
+					<h4>Profesional Experiences</h4>
+				</div>
+				<div class="cell small-6">
+					<h4>Profile</h4>
+				</div>
+			</div>
+			<div class="grid-x">
+				<div class="cell small-6">
 					<ul class="experience">
 						<li>Senior Software Engineer
 							<ul class="experience-alt">
@@ -690,22 +512,25 @@
 						</li>
 					</ul>
 				</div>
-				<div class="col-md-7 col-xs-7">
-					<h3>Profile</h3>
+				<div class="cell small-6">
 					<p>A creative, enthusiastic, versatile, open-minded human with love for familly, and interrests in sciences, technology and engineering.</p>
-					<h3>Eduction</h3>
+					<h4>Eduction</h4>
 					<p><a href="http://www.epita.fr/international/">EPITA</a>, Master Degree on Computer Sciences and Engineering (2003 graduate).</p>
-					<h3>Skills</h3>
+					<h4>Skills</h4>
 					<p class="text-center">
 						<canvas height="330" id="SkillsCanvas" width="600">Canvas not supported.</canvas>
 					</p>
 					<p>Even non exhaustive, I'm used to work with Linux, Unix,Mac OS, Windows; Develop in Language C, C++, PHP, Javascript, Java, Html; Do Technical Analysis, Business Analysis, Document Management, and much more...  </p>
 				</div>
 			</div>
-			<div class="footer">&copy; 2010-<span id="cYear"></span> BY-NC-SA | ASOVA.CO</div>
-			<script>
-				$("#cYear").html((new Date()).getFullYear());
-			</script>
+			<div class="grid-x">
+				<div class="cell">
+					<div class="footer">&copy; 2010-<span id="cYear"></span> BY-NC-SA | ASOVA.CO</div>
+					<script>
+						$("#cYear").html((new Date()).getFullYear());
+					</script>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>
