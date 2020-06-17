@@ -83,7 +83,7 @@
             var valueExtent = d3.extent(data, function(d) { return +d.n; })
             var size = d3.scaleSqrt()
               .domain(valueExtent)  // What's in the data
-              .range([ 1, 50])  // Size in pixel
+              .range([ 1, 20, 50])  // Size in pixel
           
             // Draw the map
             svg.append("g")
@@ -117,9 +117,9 @@
             // --------------- //
           
             // Add legend: circles
-            var valuesToShow = [1,5,10]
-            var xCircle = 40
-            var xLabel = 90
+            var valuesToShow = [1,20,50]
+            var xCircle = 10
+            var xLabel = 20
             svg
               .selectAll("legend")
               .data(valuesToShow)
