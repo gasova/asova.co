@@ -68,10 +68,10 @@
           
           d3.queue()
             .defer(d3.json, "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson")  // World shape
-            .defer(d3.json, "data", function () { return JSONData.slice(); })  // World shape
             .await(ready);
           
           function ready(error, dataGeo, data) {
+            var data = JSON.parse(JSONData);
 
             // Create a color scale
             var allContinent = d3.map(data, function(d){return(d.homecontinent)}).keys()
