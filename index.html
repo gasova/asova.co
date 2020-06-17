@@ -28,7 +28,7 @@
         $(function(){
           var c = new Date;
           var cur = c.getFullYear() - 2014;
-          var dataj = [
+          var JSONData = [
             {
               "homelat":48.9,
               "homelon":2.35,
@@ -54,6 +54,7 @@
               "n":2
             }
           ];
+          var data = JSONData.slice();
 
           // The svg
           var svg = d3.select("#my_dataviz"),
@@ -68,7 +69,6 @@
           
           d3.queue()
             .defer(d3.json, "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson")  // World shape
-            .defer(d3.json, "dataj") // Position of circles
             .await(ready);
           
           function ready(error, dataGeo, data) {
