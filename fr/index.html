@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-FR">
+<html lang="fr">
 <head>
     <meta charset="utf-8">
     <title>Asova.co | Résumé | Gökçe ASOVA </title>
@@ -119,6 +119,12 @@
         $(function(){
             var language = window.navigator.userLanguage || window.navigator.language;
             console.log(language); //works IE/SAFARI/CHROME/FF
+            if (language.substring(0, 2) == "en") {
+                window.location.href = "https://asova.co/";
+            }
+            if (language.substring(0, 2) == "tr") {
+                window.location.href = "https://asova.co/tr";
+            }
 
             /*
             var t = document.getElementById("pie");

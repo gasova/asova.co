@@ -119,6 +119,12 @@
         $(function(){
             var language = window.navigator.userLanguage || window.navigator.language;
             console.log(language); //works IE/SAFARI/CHROME/FF
+            if (language.substring(0, 2) == "fr") {
+                window.location.href = "https://asova.co/fr";
+            }
+            if (language.substring(0, 2) == "tr") {
+                window.location.href = "https://asova.co/tr";
+            }
 
             /*
             var t = document.getElementById("pie");

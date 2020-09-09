@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="tr-TR">
+<html lang="tr">
 <head>
     <meta charset="utf-8">
-    <title>Asova.co | Résumé | Gökçe ASOVA </title>
+    <title>Asova.co | Özgeçmiş | Gökçe ASOVA </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/favicon.ico" rel="favicon"  type="image/x-icon"/>
     <meta name="description" content="Gökçe ASOVA's  curicullum vitae. My professional experiences, education, portfolio about Computer Sciences and Engineering"/>
@@ -119,6 +119,12 @@
         $(function(){
             var language = window.navigator.userLanguage || window.navigator.language;
             console.log(language); //works IE/SAFARI/CHROME/FF
+            if (language.substring(0, 2) == "fr") {
+                window.location.href = "https://asova.co/fr";
+            }
+            if (language.substring(0, 2) == "en") {
+                window.location.href = "https://asova.co/";
+            }
 
             /*
             var t = document.getElementById("pie");
