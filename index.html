@@ -505,6 +505,11 @@
             object-fit: cover;
             object-position: center;
         }
+        @media print {
+            a[href]:after {
+                content: none !important;
+            }
+        }
     </style>
 </head>
 <body style="background-color:#eee;">
