@@ -492,6 +492,19 @@
         .text-italic {
             font-style:italic;
         }
+        .id {
+            width:150px;
+            height: 150px;
+            border-radius: 25%;
+            overflow: hidden;
+            border:3px solid #efefef;
+            float: left;
+        }
+        .idp {
+            display: flex;
+            object-fit: cover;
+            object-position: center;
+        }
     </style>
 </head>
 <body style="background-color:#eee;">
@@ -499,6 +512,9 @@
         <div class="page">
             <div class="grid-x">
                 <div class="cell small-6">
+                    <div class="id">
+                        <img src="assets/img/gasova.jpg" class="idp"/>
+                    </div>
                     <h4>Gökçe ASOVA</h4>
                 </div>
                 <div class="cell small-6">
@@ -585,12 +601,6 @@
                                     <ul class="experience">
                                         <li>Senior Software Engineer
                                             <ul class="experience-alt">
-                                                <li class="exp-comp">GAMA Energy Inc.</li>
-                                                <li class="exp-desc">Nov 2018 – Present</li>
-                                                <li class="exp-desc">Ankara, Turkey</li>
-                                                <li class="exp-desc">
-                                                    <p class="text-justify">Fullstack Development of Business Solutions; SAP BW/4HANA BI Reporting and Analysis; GATES Enerji Customer Portal and web site development with online payment integration. Jquery dependency removal and complete rewrite using VanillaJS for online payment and customer portal.</p>
-                                                </li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -606,8 +616,13 @@
                                     <ul class="experience">
                                         <li>Senior Software Engineer
                                             <ul class="experience-alt">
-                                                <li class="exp-comp">GAMA Power Systems Engineering and Contracting, Inc.</li>
-                                                <li class="exp-desc">Jul 2017 – Nov 2018</li>
+                                                <li class="exp-desc text-italic">From Nov. 2018 to Present, GAMA Energy Inc.</li>
+                                                <li class="exp-desc">Ankara, Turkey</li>
+                                                <li class="exp-desc">
+                                                    <p class="text-justify">Fullstack Development of Business Solutions; SAP BW/4HANA BI Reporting and Analysis; GATES Enerji Customer Portal and web site development with online payment integration. Jquery dependency removal and complete rewrite using VanillaJS for online payment and customer portal.</p>
+                                                </li>
+                                                <li class="exp-comp"></li>
+                                                <li class="exp-desc text-italic">From Jul. 2017 to Nov. 2018, GAMA Power Systems Engineering and Contracting, Inc.</li>
                                                 <li class="exp-desc">Ankara, Turkey</li>
                                                 <li class="exp-desc">
                                                     <p class="text-justify">Fullstack Development of Business Solutions; SAP BW/4HANA BI Reporting and Analysis; GAMA Holding A.Ş. & Group Compagnies web site development.</p>
