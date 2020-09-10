@@ -118,62 +118,12 @@
     <script>
         $(function(){
             var language = window.navigator.userLanguage || window.navigator.language;
-            console.log(language); //works IE/SAFARI/CHROME/FF
             if (language.substring(0, 2) == "en") {
-                window.location.href = "https://asova.co/";
+                window.location.href = "https://asova.co/en";
             }
             if (language.substring(0, 2) == "tr") {
                 window.location.href = "https://asova.co/tr";
             }
-
-            /*
-            var t = document.getElementById("pie");
-            if (t) {
-                var c = new Date;
-                var data = [{title: "Turkey (childhood)",y_start: 1977,y_end: 1984,color: "#62A9FF",},
-                            {title: "Spain",y_start: 1984,y_end: 1990,color: "#75B4FF",},
-                            {title: "France",y_start: 1990,y_end: 2005,color: "#86BCFF",},
-                            {title: "Turkey",y_start: 2005,y_end: 2012,color: "#99C7FF",},
-                            {title: "Belgium",y_start: 2012,y_end: 2014,color: "#99C7FF",},
-                            {title: "Turkey",y_start: 2014,y_end: c.getFullYear(),color: "#A8CFFF",},
-                        ];
-                var b, k = 0, e = 0;
-                b = t.getContext("2d"),
-                b.clearRect(0, 0, t.width, t.height);
-                for (var t = 0; t < data.length; t++) {
-                    e += data[t]["y_end"]-data[t]["y_start"];
-                }
-                for (var f = 0; f < data.length; f++)
-                    b.fillStyle = data[f]["color"],
-                    b.beginPath(),
-                    b.arc(75, 75, 75, k, k + 2 * Math.PI * ((data[f]["y_end"]-data[f]["y_start"]) / e), !1),
-                    b.lineTo(75, 75),
-                    b.fill(),
-                    k += 2 * Math.PI * ((data[f]["y_end"]-data[f]["y_start"]) / e);
-                b.save(),
-                b.translate(160, 20);
-                for (var y = 0, f = 0; f < data.length; f++) {
-                        if (f != data.length - 1) {
-                            year = data[f]["y_start"];
-                        }
-                        else {
-                            year = "Since "+data[f]["y_start"];
-                        }
-                        b.beginPath(),
-                        b.rect(0, y, 10, 10),
-                        b.fillStyle = data[f]["color"],
-                        b.closePath(),
-                        b.fill(),
-                        b.save(),
-                        b.font = "9pt Arial",
-                        b.textAlign = "left",
-                        b.fillStyle = "grey",
-                        b.fillText("["+year+"] " + data[f]["title"], 15, y + 10),
-                        b.restore(),
-                        y += 20;
-                    }
-            }
-*/
             var t = document.getElementById("SkillsCanvas");
             if (t) {
 

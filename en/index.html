@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <title>Asova.co | Résumé | Gökçe ASOVA </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/favicon.ico" rel="favicon"  type="image/x-icon"/>
+    <link href="https://asova.co/favicon.ico" rel="favicon"  type="image/x-icon"/>
     <meta name="description" content="Gökçe ASOVA's  curicullum vitae. My professional experiences, education, portfolio about Computer Sciences and Engineering"/>
     <meta name="author" content="Gökçe ASOVA"/>
     <meta name="keywords" content="Gökçe, ASOVA, business, engineering, solutions, company, sciences, experiences, javascript, php, java, c, c++, .net, vb, ruby, ror, ruby on rails, rest, sql, pl-sql"/>
-        <link rel="stylesheet" href="./assets/css/foundation.min.css" />
-    <link rel="stylesheet" href="./assets/css/main.css" />
+        <link rel="stylesheet" href="https://asova.co/assets/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://asova.co/assets/css/main.css" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112412608-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -18,7 +18,7 @@
         gtag('config', 'UA-112412608-1');
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="./assets/js/vendor/foundation.min.js"></script>
+    <script src="https://asova.co/assets/js/vendor/foundation.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
     <!-- Load d3.js and the geo projection plugin -->
     <script src="https://d3js.org/d3.v4.js"></script>
@@ -118,16 +118,13 @@
     <script>
         $(function(){
             var language = window.navigator.userLanguage || window.navigator.language;
-            if (language.substring(0, 2) == "en") {
-                window.location.href = "https://asova.co/en";
-            }
+            console.log(language); //works IE/SAFARI/CHROME/FF
             if (language.substring(0, 2) == "fr") {
                 window.location.href = "https://asova.co/fr";
             }
             if (language.substring(0, 2) == "tr") {
                 window.location.href = "https://asova.co/tr";
             }
-
 
             var t = document.getElementById("SkillsCanvas");
             if (t) {
@@ -509,7 +506,7 @@
             <div class="grid-x">
                 <div class="cell small-6">
                     <div class="id">
-                        <img src="assets/img/gasova.jpg" class="idp"/>
+                        <img src="https://asova.co/assets/img/gasova.jpg" class="idp"/>
                     </div>
                     <h4 class="idt">&nbsp;Gökçe ASOVA</h4>
                 </div>
@@ -549,41 +546,8 @@
                 </div>
                 <div class="cell small-6">
                     <svg id="my_dataviz" width="400" height="150"></svg>
-                    <!--<canvas height="150" id="pie" width="400"></canvas>-->
                 </div>
             </div>
-            <!--
-            <div class="grid-x">
-                <div class="cell">
-                    <h4>Life at a Glance!</h4>
-                </div>
-            </div>
-            <div class="grid-x">
-                <div class="cell small-4">
-                    <h5>Interacting</h5>
-                    <p>Requirements / Meetings / Training / Helping</p>
-                    <h5>Thinking</h5>
-                    <p>New Ideas / Learning / Planning / Problem Solving</p>
-                    <h5>Implementing</h5>
-                    <p>Coding / Creating / Experimenting</p>
-                    <h5>Reviewing</h5>
-                    <p>Testing / Improving / Documenting / Correcting</p>
-                </div>
-                <div class="cell small-4">
-                    <canvas height="200" id="lifeAtAGlance">Canvas not supported.</canvas>
-                </div>
-                <div class="cell small-4">
-                    <h5>Socialising</h5>
-                    <p>Friends / Trips / Cinema / Dinner / Parties</p>
-                    <h5>Holidays</h5>
-                    <p>New Destinations / New Experiences / Exploring / Sun</p>
-                    <h5>Hobbies</h5>
-                    <p>Driving / Reading / Walk / Listen to Music / Space / Sci-Fi</p>
-                    <h5>Downtime</h5>
-                    <p>Sleeping / Hot Baths / Dreaming / Staying at Home</p>
-                </div>
-            </div>
-            -->
             <div class="grid-x">
                 <div class="cell small-6">
                     <h4>Profesional Experiences</h4>
@@ -599,7 +563,7 @@
                             <div class="grid-x">
                                 <div class="cell small-1">
                                     <a href="https://www.gama.com.tr/" target="_blank">
-                                        <img src="./assets/img/gama.png" class="clogo"/></a>
+                                        <img src="https://asova.co/assets/img/gama.png" class="clogo"/></a>
                                 </div>
                                 <div class="cell small-11">
                                     <ul class="experience">
@@ -625,7 +589,7 @@
                             <div class="grid-x">
                                 <div class="cell small-1">
                                     <a href="https://www.anadolubank.com.tr" target="_blank">
-                                        <img src="./assets/img/anadolubank.png" class="clogo" /></a>
+                                        <img src="https://asova.co/assets/img/anadolubank.png" class="clogo" /></a>
                                 </div>
                                 <div class="cell small-11">
                                     <ul class="experience">
@@ -648,7 +612,7 @@
                             <div class="grid-x">
                                 <div class="cell small-1">
                                     <a href="http://www.cmcturkey.com/" target="_blank">
-                                        <img src="./assets/img/cmc.png" class="clogo"/></a>
+                                        <img src="https://asova.co/assets/img/cmc.png" class="clogo"/></a>
                                 </div>
                                 <div class="cell small-11">
                                     <ul class="experience">
@@ -670,7 +634,7 @@
                             <div class="grid-x">
                                 <div class="cell small-1">
                                     <a href="https://marsh.com" target="_blank">
-                                        <img src="./assets/img/mmc-logo.png" class="clogo"/></a>
+                                        <img src="https://asova.co/assets/img/mmc-logo.png" class="clogo"/></a>
                                 </div>
                                 <div class="cell small-11">
                                     <ul class="experience">
@@ -699,7 +663,7 @@
                             <p class="text-justify"><a href="http://international.epita.fr/" target="_blank">EPITA - Paris, FRANSA</a><br/>Master Degree on Computer Sciences and Engineering (2003 graduate).</p>
                         </div>
                         <div class="cell small-1" style="line-height:1.6rem;margin:auto 0;">
-                            <a href="http://international.epita.fr/" target="_blank"><img src="./assets/img/epita-logo-international.png" style="height:20px;width:auto;float:right;" /></a>
+                            <a href="http://international.epita.fr/" target="_blank"><img src="https://asova.co/assets/img/epita-logo-international.png" style="height:20px;width:auto;float:right;" /></a>
                         </div>
                     </div>
                     <div class="grid-x">
