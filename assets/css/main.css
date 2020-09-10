@@ -162,3 +162,7 @@ li.exp-desc {
   padding-right:15px;
   padding-left: 15px;
 }
+
+.text-bold {
+  font-weight: bold;
+}
