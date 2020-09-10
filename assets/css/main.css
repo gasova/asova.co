@@ -166,3 +166,7 @@ li.exp-desc {
 .text-bold {
   font-weight: bold;
 }
+
+.skill-label {
+  width: 350px;
+}
