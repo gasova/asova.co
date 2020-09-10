@@ -170,3 +170,10 @@ li.exp-desc {
 .skill-label {
   width: 350px;
 }
+
+.pr-1 {
+  padding-right: 15px;
+} 
+.pl-1 {
+  padding-left: 15px;
+}
