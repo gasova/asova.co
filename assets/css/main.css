@@ -157,3 +157,8 @@ li.exp-desc {
   .footer {display:none;}
 
 }
+
+.cell {
+  padding-right:15px;
+  padding-left: 15px;
+}
