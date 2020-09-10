@@ -158,7 +158,7 @@ li.exp-desc {
 
 }
 
-.cell {
+.cell.small-6 {
   padding-right:15px;
   padding-left: 15px;
 }
