@@ -197,6 +197,10 @@ li.exp-desc {
   width: 100px;
   height: 100px;
 }
+table.unstriped {
+  width:100%;
+  margin:0;
+}
 table.unstriped tbody {
   border:0!important;
   margin-left:-15px;
