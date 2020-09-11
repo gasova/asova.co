@@ -113,7 +113,7 @@ li.exp-period:before {
 
 .social a{
   color:#e6e6e6;
-  font-size: .5rem;
+  padding-left: 15px;
 }
 .social a:hover{
   color:#666;
