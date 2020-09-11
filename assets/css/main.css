@@ -77,16 +77,6 @@ li.exp-period {
   font-weight:normal;
   
 }
-li.exp-period:before {
-/*
-  content: "\B7";
-  margin-left: -15px;
-  margin-right: 15px;
-  font-size: 1.25rem;
-  font-weight: 600;
-  */
-}
-
 
 .wrapper {
   position:relative;
