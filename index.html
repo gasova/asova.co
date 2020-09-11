@@ -26,24 +26,30 @@
 </head>
 <body>
     <div class="white-bg container">
-        <div class="row d-flex flex-row justify-content-between align-items-center">
-            <div class="col-sm-6">
+        <div class="column-wrapper">
+            <div class="column">
                 <div class="id">
                     <img src="https://asova.co/assets/img/gasova.jpg" class="idp"/>
                 </div>
                 <h4 class="idt">&nbsp;Gökçe ASOVA</h4>
             </div>
-            <div class="col-sm-6">
-                <div class="social">
-                    <a href="https://github.com/gasova"><i class="fab fa-github fa-3x"></i></a>&nbsp;
-                    <a href="https://www.linkedin.com/in/gasova/"><i class="fab fa-linkedin-in fa-3x"></i></a>&nbsp;
-                    <a href="https://www.facebook.com/gasova"><i class="fab fa-facebook fa-3x"></i></a>&nbsp;
-                    <a href="https://www.twitter.com/asova"><i class="fab fa-twitter fa-3x"></i></a>
-                </div>
-                <div class="contact-info d-flex flex-column justify-content-center align-items-end">
-                    <div><strong>Email:</strong> <a href="mailto:gokce@asova.co">gokce@asova.co</a></div>
-                    <div><strong>Address:</strong> Upon request</div>
-                    <div><strong>Phone:</strong> Upon request</div>
+            <div class="column">
+                <div class="container no-padding">
+                    <div class="row no-gutters">
+                        <div class="col-sm-12">
+                            <div class="social">
+                                <a href="https://github.com/gasova"><i class="fab fa-github fa-3x"></i></a>&nbsp;
+                                <a href="https://www.linkedin.com/in/gasova/"><i class="fab fa-linkedin-in fa-3x"></i></a>&nbsp;
+                                <a href="https://www.facebook.com/gasova"><i class="fab fa-facebook fa-3x"></i></a>&nbsp;
+                                <a href="https://www.twitter.com/asova"><i class="fab fa-twitter fa-3x"></i></a>
+                            </div>
+                            <div class="contact-info text-right">
+                                <strong>Email:</strong></td><td><a href="mailto:gokce@asova.co">gokce@asova.co</a><br/>
+                                <strong>Address:</strong></td><td>Upon request<br/>
+                                <strong>Phone:</strong></td><td>Upon request<br/>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -80,12 +86,12 @@
                                                 <li>Senior Software Engineer
                                                     <ul class="experience-alt">
                                                         <li class="exp-comp">GAMA Energy Inc.</li>
-                                                        <li class="exp-desc text-italic">From Nov. 2018 to Present, Ankara, TURKEY</li>
+                                                        <li class="exp-period text-italic">From Nov. 2018 to Present, Ankara, TURKEY</li>
                                                         <li class="exp-desc text-justify">
                                                             Fullstack Development of Business Solutions; SAP BW/4HANA BI Reporting and Analysis; GATES Enerji Customer Portal and web site development with online payment integration. Jquery dependency removal and complete rewrite using VanillaJS for online payment and customer portal
                                                         </li>
                                                         <li class="exp-comp">GAMA Power Systems Engineering and Contracting Inc.</li>
-                                                        <li class="exp-desc text-italic">From Jul. 2017 to Nov. 2018, Ankara, TURKEY</li>
+                                                        <li class="exp-period text-italic">From Jul. 2017 to Nov. 2018, Ankara, TURKEY</li>
                                                         <li class="exp-desc text-justify">
                                                             Fullstack Development of Business Solutions; SAP BW/4HANA BI Reporting and Analysis; GAMA Holding A.Ş. & Group Compagnies web site development
                                                         </li>
@@ -106,7 +112,7 @@
                                                 <li>Senior Software Engineer
                                                     <ul class="experience-alt">
                                                         <li class="exp-comp">Anadolubank</li>
-                                                        <li class="exp-desc text-italic">From Oct. 2015 to Jun. 2017, Istanbul, TURKEY</li>
+                                                        <li class="exp-period text-italic">From Oct. 2015 to Jun. 2017, Istanbul, TURKEY</li>
                                                         <li class="exp-desc">
                                                             <p class="text-justify">
                                                                 Succeeded in achieving companies goals in integrating financial control solutions and increased client business oportunities
@@ -130,7 +136,7 @@
                                                 <li>Senior Software Engineer
                                                     <ul class="experience-alt">
                                                         <li class="exp-comp">CMC Turkey</li>
-                                                        <li class="exp-desc text-italic">From Sep. 2014 to Sep. 2015, Istanbul, TURKEY</li>
+                                                        <li class="exp-period text-italic">From Sep. 2014 to Sep. 2015, Istanbul, TURKEY</li>
                                                         <li class="exp-desc">
                                                             <p class="text-justify">
                                                                 Helped the company to enhance their Business Intelligence needs by integrating in-house client solutions
@@ -153,11 +159,11 @@
                                                 <li>Senior IT Executive
                                                     <ul class="experience-alt">
                                                         <li class="exp-comp">Marsh &amp; McLennan</li>
-                                                        <li class="exp-desc text-italic">From Sep. 2012 to Sep. 2014, Brussels, BELGIUM</li>
+                                                        <li class="exp-period text-italic">From Sep. 2012 to Sep. 2014, Brussels, BELGIUM</li>
                                                         <li class="exp-desc text-justify">
                                                             Succeeded on allowing the company to grow it's business by analysing needs and developping client products
                                                         </li>
-                                                        <li class="exp-desc text-italic">From Oct. 2005 to Sep. 2012, Istanbul, TURKEY</li>
+                                                        <li class="exp-period text-italic">From Oct. 2005 to Sep. 2012, Istanbul, TURKEY</li>
                                                         <li class="exp-desc text-justify">
                                                             Allowed the company to grow it's business and client satisfaction by developping in-house client solutions
                                                         </li>
@@ -277,9 +283,6 @@
         <div class="row no-gutters">
             <div class="col-sm-12">
                 <div class="footer">&copy; 2010 - <span id="cYear"></span> ASOVA.CO | BY-NC-SA </div>
-                <script>
-                    $("#cYear").html((new Date()).getFullYear());
-                </script>
             </div>
         </div>
     </div>
