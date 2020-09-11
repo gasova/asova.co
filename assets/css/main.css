@@ -232,3 +232,8 @@ ul.experiences {
 .text-justify {
   text-align: justify!important;
 }
+
+.clogo {
+  width:50px;
+  height: auto;
+}
