@@ -128,13 +128,7 @@ li.exp-desc {
 
 @media print {
   body {
-    font-size:.5rem;
     color:#6e6e6e;
-    zoom: 1.0;
-    width:21.1cm;
-    height:29.97cm;
-    margin:0 auto;
-    overflow:hidden;
   }
   .row, .wrapper {
     margin:0;
