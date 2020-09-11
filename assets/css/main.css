@@ -229,3 +229,7 @@ ul.experiences {
 .white-bg {
   background-color: #fff;
 }
+
+.text-justify {
+  text-align: justify!important;
+}
