@@ -237,3 +237,8 @@ ul.experiences {
   width: 50%;
   height: max-content;
 }
+
+.no-padding {
+  padding-left:0!important;
+  padding-right: 0!important;
+}
