@@ -127,6 +127,10 @@ li.exp-desc {
 .col-print-12{width:100%; float:left;}
 
 @media print {
+  .container {
+    width:21.1cm;
+    margin:.5cm;
+  }
   .row, .wrapper {
     margin:0;
     padding:0;
