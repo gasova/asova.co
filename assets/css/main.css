@@ -108,6 +108,9 @@ li.exp-desc {
     padding: 0;
     display: flex;
   }
+  .social {
+    display:none;
+  }
   /*
   .container {
     width: 21.1cm!important;
@@ -117,9 +120,6 @@ li.exp-desc {
   .row, .wrapper {
     margin:0;
     padding:0;
-  }
-  .social {
-    display:none;
   }
   .XR01AB {
     width:100%;
