@@ -259,3 +259,9 @@ ul.experiences {
 .contact-info {
   height: 100px;
 }
+
+#header {
+  display: block;
+  height: 100px;
+  overflow: hidden;
+}
