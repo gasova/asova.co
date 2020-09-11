@@ -100,10 +100,10 @@ li.exp-desc {
 }
 
 @media print {
-  /*
   body {
     font-size:9pt;
   }
+  /*
   .container {
     width: 21.1cm!important;
     max-width: unset!important;
