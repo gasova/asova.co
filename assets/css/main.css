@@ -255,3 +255,7 @@ ul.experiences {
   padding-left:0!important;
   padding-right: 0!important;
 }
+
+.contact-info {
+  height: 100px;
+}
