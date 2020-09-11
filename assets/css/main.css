@@ -99,6 +99,12 @@ li.exp-desc {
   color:#666;
 }
 
+@media screen {
+  .contact-info {
+    display: none;
+  }
+}
+
 @media print {
   body {
     font-size: 9pt;
@@ -109,6 +115,9 @@ li.exp-desc {
   }
   .social {
     display:none;
+  }
+  .contact-info {
+    display: flex;
   }
   /*
   .container {
