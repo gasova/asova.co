@@ -4,773 +4,343 @@
     <meta charset="utf-8">
     <title>Asova.co | Résumé | Gökçe ASOVA </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/favicon.ico" rel="favicon"  type="image/x-icon"/>
     <meta name="description" content="Gökçe ASOVA's  curicullum vitae. My professional experiences, education, portfolio about Computer Sciences and Engineering"/>
     <meta name="author" content="Gökçe ASOVA"/>
     <meta name="keywords" content="Gökçe, ASOVA, business, engineering, solutions, company, sciences, experiences, javascript, php, java, c, c++, .net, vb, ruby, ror, ruby on rails, rest, sql, pl-sql"/>
-        <link rel="stylesheet" href="./assets/css/foundation.min.css" />
-    <link rel="stylesheet" href="./assets/css/main.css" />
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112412608-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-112412608-1');
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="./assets/js/vendor/foundation.min.js"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
-    <!-- Load d3.js and the geo projection plugin -->
-    <script>
-        $(function(){
-          var c = new Date;
-          var cur = c.getFullYear() - 2014 +7+9+6;
-          var JSONData = [
-            {
-              "homelat":48.9,
-              "homelon":2.35,
-              "homecontinent":"France",
-              "n":15
-            },
-            {
-              "homelat":38.97,
-              "homelon":35.25,
-              "homecontinent":"Turkey",
-              "n":cur
-            },
-            {
-              "homelat":40.47,
-              "homelon":3.75,
-              "homecontinent":"Spain",
-              "n":6
-            },
-            {
-              "homelat":50.51,
-              "homelon":4.47,
-              "homecontinent":"Belgium",
-              "n":2
-            }
-          ];
-
-          // The svg
-          var svg = d3.select("#my_dataviz"),
-              width = +svg.attr("width"),
-              height = +svg.attr("height");
-          
-          // Map and projection
-          var projection = d3.geoMercator()
-              .center([0,20])                // GPS of location to zoom on
-              .scale(50)                       // This is like the zoom
-              .translate([ width/2, height/2 ])
-          
-          d3.queue()
-            .defer(d3.json, "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson")  // World shape
-            .await(ready);
-          
-          function ready(error, dataGeo, data) {
-            var data = JSONData.slice();
-
-            // Create a color scale
-            var allContinent = d3.map(data, function(d){return(d.homecontinent)}).keys()
-            var color = d3.scaleOrdinal()
-              .domain(allContinent)
-              .range(d3.schemePaired);
-          
-            // Add a scale for bubble size
-            var valueExtent = d3.extent(data, function(d) { return +d.n; })
-            var size = d3.scaleSqrt()
-              .domain(valueExtent)  // What's in the data
-              .range([ 1, 20, 50])  // Size in pixel
-          
-            // Draw the map
-            svg.append("g")
-                .selectAll("path")
-                .data(dataGeo.features)
-                .enter()
-                .append("path")
-                  .attr("fill", "#b8b8b8")
-                  .attr("d", d3.geoPath()
-                      .projection(projection)
-                  )
-                .style("stroke", "none")
-                .style("opacity", .3)
-          
-            // Add circles:
-            svg
-              .selectAll("myCircles")
-              .data(data.sort(function(a,b) { return +b.n - +a.n }).filter(function(d,i){ return i<1000 }))
-              .enter()
-              .append("circle")
-                .attr("cx", function(d){ return projection([+d.homelon, +d.homelat])[0] })
-                .attr("cy", function(d){ return projection([+d.homelon, +d.homelat])[1] })
-                .attr("r", function(d){ return size(+d.n) })
-                .style("fill", function(d){ return color(d.homecontinent) })
-                .attr("stroke", function(d){ if(d.n>2000){return "black"}else{return "none"}  })
-                .attr("stroke-width", 1)
-                .attr("fill-opacity", .4)
-         
-          }
-        });
-      </script>    
-    <script>
-        $(function(){
-            var language = window.navigator.userLanguage || window.navigator.language;
-            if (language.substring(0, 2) == "en") {
-                window.location.href = "https://asova.co/en";
-            }
-            if (language.substring(0, 2) == "fr") {
-                window.location.href = "https://asova.co/fr";
-            }
-            if (language.substring(0, 2) == "tr") {
-                window.location.href = "https://asova.co/tr";
-            }
-
-
-            var t = document.getElementById("SkillsCanvas");
-            if (t) {
-
-
-
-                var n = t.getContext("2d");
-                for (n.save(),
-                n.font = "8pt Arial",
-                n.fillStyle = "black",
-                n.textAlign = "left",
-                n.fillText("TECHNICAL SKILLS *", 0, 30),
-                n.save(),
-                n.fillStyle = "grey",
-                n.textAlign = "right",
-                n.fillText("* THIS LIST IS NOT EXHAUSTIVE.", 600, 30),
-                n.restore(),
-                n.translate(0, 40),
-                n.beginPath(),
-                n.moveTo(78, 200),
-                n.lineTo(78, 0),
-                n.strokeStyle = "#000",
-                n.lineWidth = .5,
-                n.stroke(),
-                n.beginPath(),
-                n.moveTo(78, 200),
-                n.lineTo(600, 200),
-                n.strokeStyle = "#000",
-                n.lineWidth = .5,
-                n.stroke(),
-                index = 20; index < 200; index += 40)
-                    n.beginPath(),
-                    n.moveTo(72, index),
-                    n.lineTo(78, index),
-                    n.strokeStyle = "#000",
-                    n.lineWidth = .5,
-                    n.stroke();
-                n.font = "8pt Arial",
-                n.fillStyle = "grey",
-                n.textAlign = "right",
-                n.fillText("Expert", 70, 23),
-                n.fillText("Advanced", 70, 63),
-                n.fillText("Intermediate", 70, 103),
-                n.fillText("Rookie", 70, 143),
-                n.fillText("Newbie", 70, 183);
-                var i = 81
-                  , o = 20
-                  , r = 197
-                  , s = 38
-                  , a = 38;
-                n.beginPath();
-                var l = 1
-                  , i = 81;
-                n.rect(i, o * l - 1, s, r - (o * l - 1)),
-                n.fillStyle = "#62A9FF",
-                n.fill(),
-                n.beginPath();
-                var l = 1
-                  , i = i + a + 2;
-                n.rect(i, o * l - 1, s, r - (o * l - 1)),
-                n.fillStyle = "#86BCFF",
-                n.fill(),
-                n.beginPath();
-                var l = 1
-                  , i = i + a + 2;
-                n.rect(i, o * l - 1, s, r - (o * l - 1)),
-                n.fillStyle = "#62A9FF",
-                n.fill(),
-                n.beginPath();
-                var l = 5
-                  , i = i + a + 2;
-                n.rect(i, o * l - 1, s, r - (o * l - 1)),
-                n.fillStyle = "#86BCFF",
-                n.fill(),
-                n.beginPath();
-                var l = 2
-                  , i = i + a + 2;
-                n.rect(i, o * l - 1, s, r - (o * l - 1)),
-                n.fillStyle = "#62A9FF",
-                n.fill(),
-                n.beginPath();
-                var l = 1
-                  , i = i + a + 2;
-                n.rect(i, o * l - 1, s, r - (o * l - 1)),
-                n.fillStyle = "#86BCFF",
-                n.fill(),
-                n.beginPath();
-                var l = 5
-                  , i = i + a + 2;
-                n.rect(i, o * l - 1, s, r - (o * l - 1)),
-                n.fillStyle = "#62A9FF",
-                n.fill(),
-                n.beginPath();
-                var l = 7
-                  , i = i + a + 2;
-                n.rect(i, o * l - 1, s, r - (o * l - 1)),
-                n.fillStyle = "#86BCFF",
-                n.fill(),
-                n.beginPath();
-                var l = 9
-                  , i = i + a + 2;
-                n.rect(i, o * l - 1, s, r - (o * l - 1)),
-                n.fillStyle = "#62A9FF",
-                n.fill(),
-                n.beginPath();
-                var l = 9
-                  , i = i + a + 2;
-                n.rect(i, o * l - 1, s, r - (o * l - 1)),
-                n.fillStyle = "#86BCFF",
-                n.fill(),
-                n.beginPath();
-                var l = 1
-                  , i = i + a + 2;
-                n.rect(i, o * l - 1, s, r - (o * l - 1)),
-                n.fillStyle = "#62A9FF",
-                n.fill(),
-                n.beginPath();
-                var l = 1
-                  , i = i + a + 2;
-                n.rect(i, o * l - 1, s, r - (o * l - 1)),
-                n.fillStyle = "#86BCFF",
-                n.fill(),
-                n.beginPath();
-                var l = 2
-                  , i = i + a + 2;
-                n.rect(i, o * l - 1, s, r - (o * l - 1)),
-                n.fillStyle = "#62A9FF",
-                n.fill(),
-                n.font = "8pt Arial",
-                n.fillStyle = "grey",
-                n.textAlign = "right";
-                var c = 100
-                  , u = new Array;
-                u[0] = "XHTML/HTML",
-                u[1] = "Vanilla JS/AJAX",
-                u[2] = "PHP",
-                u[3] = "Ruby on Rails",
-                u[4] = "SQL/PL-SQL",
-                u[5] = "C#/.NET/.NET Core",
-                u[6] = "Language C",
-                u[7] = "Obj-C/Swift",
-                u[8] = "Python",
-                u[9] = "Perl",
-                u[10] = "XML/XSL/SOAP",
-                u[11] = "UNIX/Linux/Mac OS",
-                u[12] = "Other...";
-                for (var c = 102, f = 0; f < u.length; f++)
-                    n.save(),
-                    n.translate(c, 210),
-                    n.rotate(-45),
-                    n.fillText(u[f], 0, 0),
-                    n.restore(),
-                    c += 40;
-                var t = document.getElementById("timeline0");
-                if (t) {
-                    var n = t.getContext("2d")
-                      , d = 80
-                      , p = 560
-                      , h = 40
-                      , g = 380;
-                    n.save();
-                    var v = new Image
-                      , m = new Image;
-                    v.onload = function() {
-                        n.drawImage(v, 0, 0)
-                    }
-                    ,
-                    m.onload = function() {
-                        n.drawImage(m, 575, 0)
-                    }
-                    ,
-                    n.save(),
-                    n.beginPath(),
-                    n.rect(0, 0, p, d),
-                    n.fillStyle = "#ccf",
-                    n.fill(),
-                    n.translate(p, 0),
-                    n.beginPath(),
-                    n.moveTo(0, 0),
-                    n.lineTo(d / 2, d / 2),
-                    n.lineTo(0, d),
-                    n.restore(),
-                    n.closePath(),
-                    n.fillStyle = "#ccf",
-                    n.fill(),
-                    n.save(),
-                    n.translate(40, 0),
-                    n.beginPath(),
-                    n.rect(0, h, g, h),
-                    n.fillStyle = "#aae",
-                    n.fill(),
-                    n.translate(g, 2 * h),
-                    n.beginPath(),
-                    n.scale(1, -1),
-                    n.moveTo(0, 0),
-                    n.lineTo(0, h),
-                    n.lineTo(h, h),
-                    n.closePath(),
-                    n.fillStyle = "#aae",
-                    n.fill(),
-                    n.restore(),
-                    n.save(),
-                    vYears = new Array(" ","...","1996","1997","1998","1999","2000","2002","2003","2005","..."," ");
-                    var y = (p + 80) / vYears.length;
-                    for (n.font = "8pt Arial",
-                    n.fillStyle = "grey",
-                    c = 41,
-                    f = 0; f < vYears.length; f++)
-                        n.save(),
-                        n.translate(c, 34),
-                        n.fillText(vYears[f], 0, 0),
-                        n.restore(),
-                        c += y;
-                    n.save(),
-                    c = 2,
-                    n.save(),
-                    n.translate(c, 13),
-                    n.fillText("Born 22th Feb, 1977", 0, 0),
-                    c += y,
-                    n.restore(),
-                    n.save(),
-                    n.translate(40, 60),
-                    n.save(),
-                    n.fillStyle = "#666",
-                    n.fillText("LT Fernand Holweck", 1, 0),
-                    n.restore(),
-                    n.beginPath(),
-                    n.moveTo(2 * y + 10, -20),
-                    n.lineTo(2 * y + 10, -10),
-                    n.strokeStyle = "#ccc",
-                    n.lineWidth = 2,
-                    n.stroke(),
-                    n.restore(),
-                    n.save(),
-                    c += y,
-                    n.translate(c + 35, 60),
-                    n.save(),
-                    n.fillStyle = "#666",
-                    n.fillText("LT Jacquard", 0, 0),
-                    n.restore(),
-                    n.save(),
-                    n.fillStyle = "#000",
-                    n.fillText("IBM", 10, 15),
-                    n.fillText("SIPA", 40, 15),
-                    n.fillText("ALCATEL", 90, 15),
-                    n.fillText("SIPA", 160, 15),
-                    n.fillText("MARSH", 320, 15),
-                    n.restore(),
-                    n.beginPath(),
-                    c = 65,
-                    n.moveTo(c, -20),
-                    n.lineTo(c, -10),
-                    n.strokeStyle = "#ccc",
-                    n.lineWidth = 2,
-                    n.stroke(),
-                    n.restore(),
-                    n.save(),
-                    c = 8 * y,
-                    n.translate(c + 10, 60),
-                    n.save(),
-                    n.fillStyle = "#666",
-                    n.fillText("EPITA", 0, 0),
-                    n.restore(),
-                    n.beginPath(),
-                    c = 35,
-                    n.moveTo(c, -20),
-                    n.lineTo(c, -10),
-                    n.strokeStyle = "#ccc",
-                    n.lineWidth = 2,
-                    n.stroke(),
-                    n.restore(),
-                    n.save()
+        <link rel="stylesheet" href="https://asova.co/assets/css/foundation.min.css" />
+        <link href="https://asova.co/favicon.ico" rel="favicon"  type="image/x-icon"/>
+        <link rel="stylesheet" href="https://asova.co/assets/css/bootstrap-grid.min.css" />
+        <link rel="stylesheet" href="https://asova.co/assets/css/main.css" />
+        <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var language = window.navigator.userLanguage || window.navigator.language;
+                if (language.substring(0, 2) == "fr") {
+                    window.location.href = "https://asova.co/fr";
                 }
-            }
-
-            var t = document.getElementById("lifeAtAGlance");
-            if (t) {
-                var n = t.getContext("2d");
-                n.translate(-180, 0),
-                n.globalAlpha = .4;
-                var $ = 250
-                  , D = 100
-                  , A = 70;
-                n.beginPath(),
-                n.arc($, D, A, 0, 2 * Math.PI, !1),
-                n.fillStyle = "#86BCFF",
-                n.fill(),
-                n.closePath();
-                var $ = 350
-                  , D = 100
-                  , A = 70;
-                for (n.beginPath(),
-                n.arc($, D, A, 0, 2 * Math.PI, !1),
-                n.fillStyle = "#86BCFF",
-                n.fill(),
-                n.closePath(),
-                n.save(),
-                n.globalAlpha = 1,
-                n.beginPath(),
-                f = 0; f <= 200; f += 10)
-                    n.moveTo(300, f),
-                    n.lineTo(300, f + 5);
-                n.lineWidth = 1,
-                n.strokeStyle = "grey",
-                n.stroke(),
-                n.closePath();
-                var v = new Image
-                  , m = new Image;
-                v.onload = function() {
-                    n.drawImage(v, 330, 60)
+                if (language.substring(0, 2) == "tr") {
+                    window.location.href = "https://asova.co/tr";
                 }
-                ,
-                m.onload = function() {
-                    n.drawImage(m, 190, 60)
-                }
-                ,
-                v.src = "assets/img/joystick.png",
-                m.src = "assets/img/hand.png",
-                n.globalAlpha = .6
-            }
-
-
-        });
-    </script>
-</head>
-<body style="background-color:#eee;">
-    <div class="center grid-container">
-        <div class="page">
-            <div class="grid-x">
-                <div class="cell small-6">
-                    <div class="id">
-                        <img src="assets/img/gasova.jpg" class="idp"/>
-                    </div>
-                    <h4 class="idt">&nbsp;Gökçe ASOVA</h4>
+            }, false);
+        </script>
+    </head>
+<body>
+    <div class="white-bg container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="id">
+                    <img src="https://asova.co/assets/img/gasova.jpg" class="idp"/>
                 </div>
-                <div class="cell small-6">
-                    <div class="social">
-                        <a href="https://github.com/gasova"><i class="fab fa-github fa-3x"></i></a>&nbsp;
-                        <a href="https://www.linkedin.com/in/gasova/"><i class="fab fa-linkedin-in fa-3x"></i></a>&nbsp;
-                        <a href="https://www.facebook.com/gasova"><i class="fab fa-facebook fa-3x"></i></a>&nbsp;
-                        <a href="https://www.twitter.com/asova"><i class="fab fa-twitter fa-3x"></i></a>
-                    </div>
+                <h4 class="idt">&nbsp;Gökçe ASOVA</h4>
+            </div>
+            <div class="col-sm-6">
+                <div class="social">
+                    <a href="https://github.com/gasova"><i class="fab fa-github fa-3x"></i></a>&nbsp;
+                    <a href="https://www.linkedin.com/in/gasova/"><i class="fab fa-linkedin-in fa-3x"></i></a>&nbsp;
+                    <a href="https://www.facebook.com/gasova"><i class="fab fa-facebook fa-3x"></i></a>&nbsp;
+                    <a href="https://www.twitter.com/asova"><i class="fab fa-twitter fa-3x"></i></a>
                 </div>
             </div>
-            <div class="grid-x">
-                <div class="cell small-12">
-                    <p class="text-justify">A creative, enthusiastic and versatile person, with competences and expertise in various fields such as specialization in electronic document 
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <p class="text-justify">A creative, enthusiastic and versatile person, with competences and expertise in various fields such as specialization in electronic document 
                     management, desktop app, web, mobile, rest api, development. One of my strongest skills is communication, organization and analysis of business needs allowing 
                     me to take effective initiatives to achieve my goals. I count on the quality and results of my work. I have a very good technical knowledge allowing me to clearly identify 
                     the details to enable the delivery of reliable and clean projects on time and within the agreed budget. I have a preference for the technical environment where I am 
                     required to develop and use new technologies that allows me to challenge myself. I enjoy working in a team and my ability to manage stress and, if necessary, help others, 
-                    allows me to integrate and adapt to all kind of situations.</p>
-                    <p>
-                        <table class="unstriped coord">
+                    allows me to integrate and adapt to all kind of situations.
+                </p>
+                <p>
+                    <table class="unstriped coord">
+                        <tr>
+                            <td><strong>Email:</strong></td>
+                            <td style="width:90%;">gokce@asova.co</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Phone:</strong></td>
+                            <td style="width:90%;">upon request</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Address:</strong></td>
+                            <td style="width:90%;">upon request</td>
+                        </tr>
+                    </table>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <h4>Profesional Experiences</h4>
+            </div>
+            <div class="col-sm-6">
+                <h4>Education</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <ul class="experiences">
+                    <li>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <a href="https://www.gama.com.tr/" target="_blank">
+                                    <img src="https://asova.co/assets/img/gama.png" class="clogo"/></a>
+                            </div>
+                            <div class="col-sm-10">
+                                <ul class="experience">
+                                    <li>Senior Software Engineer
+                                        <ul class="experience-alt">
+                                            <li class="exp-comp">GAMA Energy Inc.</li>
+                                            <li class="exp-desc text-italic">From Nov. 2018 to Present, Ankara, TURKEY</li>
+                                            <li class="exp-desc text-justify">
+                                                Fullstack Development of Business Solutions; SAP BW/4HANA BI Reporting and Analysis; GATES Enerji Customer Portal and web site development with online payment integration. Jquery dependency removal and complete rewrite using VanillaJS for online payment and customer portal.
+                                            </li>
+                                            <li class="exp-comp">GAMA Power Systems Engineering and Contracting Inc.</li>
+                                            <li class="exp-desc text-italic">From Jul. 2017 to Nov. 2018, Ankara, TURKEY</li>
+                                            <li class="exp-desc text-justify">
+                                                Fullstack Development of Business Solutions; SAP BW/4HANA BI Reporting and Analysis; GAMA Holding A.Ş. & Group Compagnies web site development.
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <a href="https://www.anadolubank.com.tr" target="_blank">
+                                    <img src="https://asova.co/assets/img/anadolubank.png" class="clogo" /></a>
+                            </div>
+                            <div class="col-sm-10">
+                                <ul class="experience">
+                                    <li>Senior Software Engineer
+                                        <ul class="experience-alt">
+                                            <li class="exp-comp">Anadolubank</li>
+                                            <li class="exp-desc">From Oct. 2015 to Jun. 2017, Istanbul, TURKEY</li>
+                                            <li class="exp-desc">
+                                                <p class="text-justify">Succeeded in achieving companies goals in integrating financial control solutions and increased client business oportunities.</p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <a href="http://www.cmcturkey.com/" target="_blank">
+                                    <img src="https://asova.co/assets/img/cmc.png" class="clogo"/></a>
+                            </div>
+                            <div class="col-sm-10">
+                                <ul class="experience">
+                                    <li>Senior Software Engineer
+                                        <ul class="experience-alt">
+                                            <li class="exp-comp">CMC Turkey</li>
+                                            <li class="exp-desc">From Sep. 2014 to Sep. 2015, Istanbul, TURKEY</li>
+                                            <li class="exp-desc">
+                                                <p class="text-justify">Helped the company to enhance their Business Intelligence needs by integrating in-house client solutions</p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <a href="https://marsh.com" target="_blank">
+                                    <img src="https://asova.co/assets/img/mmc-logo.png" class="clogo"/></a>
+                            </div>
+                            <div class="col-sm-10">
+                                <ul class="experience">
+                                    <li>Senior IT Executive
+                                        <ul class="experience-alt">
+                                            <li class="exp-comp">Marsh &amp; McLennan</li>
+                                            <li class="exp-desc text-italic">From Sep. 2012 to Sep. 2014, in Brussels, BELGIUM</li>
+                                            <li class="exp-desc text-justify">
+                                                Succeeded on allowing the company to grow it's business by analysing needs and developping client products
+                                            </li>
+                                            <li class="exp-desc text-italic">From Oct. 2005 to Sep. 2012, in İstanbul, TURKEY</li>
+                                            <li class="exp-desc text-justify">
+                                                Allowed the company to grow it's business and client satisfaction by developping in-house client solutions
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-sm-10">
+                        <p class="text-justify"><span class="text-bold">EPITA - Paris, FRANCE</span><br/>Master Degree on Computer Sciences and Engineering<br/>
+                            <span class="proficiency">(2003 graduate)</span></p>
+                    </div>
+                    <div class="col-sm-2" style="line-height:1.6rem;margin:auto 0;">
+                        <a href="http://international.epita.fr/" target="_blank"><img src="https://asova.co/assets/img/epita-logo-international.png" style="float:right;" /></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h4>Languages</h4>
+                    </div>
+                    <div class="col-sm-12">
+                        <table class="unstriped">
                             <tr>
-                                <td><strong>Email:</strong></td>
-                                <td style="width:90%;">gokce@asova.co</td>
+                                <td class="skill-label">French<br/><span class="proficiency">Native or bilingual proficiency</span></td>
+                                <td class="star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></td>
                             </tr>
                             <tr>
-                                <td><strong>Phone:</strong></td>
-                                <td style="width:90%;">upon request</td>
+                                <td class="skill-label">English<br/><span class="proficiency">Full professional proficiency</span></td>
+                                <td class="star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></td>
                             </tr>
                             <tr>
-                                <td><strong>Address:</strong></td>
-                                <td style="width:90%;">upon request</td>
+                                <td class="skill-label">Turkish<br/><span class="proficiency">Native or bilingual proficiency</span></td>
+                                <td class="star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="skill-label">Spanish<br/><span class="proficiency">Limited working proficiency</span></td>
+                                <td class="star"><i class="fas fa-star"></i><i class="fas fa-star"></i></td>
                             </tr>
                         </table>
-                    </p>
-                </div>
-                <!--
-                <div class="cell small-6">
-                    <svg id="my_dataviz" width="531" height="150"></svg>
-                </div>-->
-            </div>
-            <div class="grid-x">
-                <div class="cell small-6">
-                    <h4>Profesional Experiences</h4>
-                </div>
-                <div class="cell small-6">
-                    <h4>Education</h4>
-                </div>
-            </div>
-            <div class="grid-x">
-                <div class="cell small-6">
-                    <ul class="experiences">
-                        <li>
-                            <div class="grid-x">
-                                <div class="cell small-2">
-                                    <a href="https://www.gama.com.tr/" target="_blank">
-                                        <img src="./assets/img/gama.png" class="clogo"/></a>
-                                </div>
-                                <div class="cell small-10">
-                                    <ul class="experience">
-                                        <li>Senior Software Engineer
-                                            <ul class="experience-alt">
-                                                <li class="exp-comp">GAMA Energy Inc.</li>
-                                                <li class="exp-desc text-italic">From Nov. 2018 to Present, Ankara, TURKEY</li>
-                                                <li class="exp-desc text-justify">
-                                                    Fullstack Development of Business Solutions; SAP BW/4HANA BI Reporting and Analysis; GATES Enerji Customer Portal and web site development with online payment integration. Jquery dependency removal and complete rewrite using VanillaJS for online payment and customer portal.
-                                                </li>
-                                                <li class="exp-comp">GAMA Power Systems Engineering and Contracting Inc.</li>
-                                                <li class="exp-desc text-italic">From Jul. 2017 to Nov. 2018, Ankara, TURKEY</li>
-                                                <li class="exp-desc text-justify">
-                                                    Fullstack Development of Business Solutions; SAP BW/4HANA BI Reporting and Analysis; GAMA Holding A.Ş. & Group Compagnies web site development.
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="grid-x">
-                                <div class="cell small-2">
-                                    <a href="https://www.anadolubank.com.tr" target="_blank">
-                                        <img src="./assets/img/anadolubank.png" class="clogo" /></a>
-                                </div>
-                                <div class="cell small-10">
-                                    <ul class="experience">
-                                        <li>Senior Software Engineer
-                                            <ul class="experience-alt">
-                                                <li class="exp-comp">Anadolubank</li>
-                                                <li class="exp-desc">Oct 2015 – Jun 2017</li>
-                                                <li class="exp-desc">Istanbul, Turkey</li>
-                                                <li class="exp-desc">
-                                                    <p class="text-justify">Succeeded in achieving companies goals in integrating financial control solutions and increased client business oportunities.</p>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                        </li>
-                        <li>
-                            <div class="grid-x">
-                                <div class="cell small-2">
-                                    <a href="http://www.cmcturkey.com/" target="_blank">
-                                        <img src="./assets/img/cmc.png" class="clogo"/></a>
-                                </div>
-                                <div class="cell small-10">
-                                    <ul class="experience">
-                                        <li>Senior Software Engineer
-                                            <ul class="experience-alt">
-                                                <li class="exp-comp">CMC Turkey</li>
-                                                <li class="exp-desc">Sep 2014 – Sep 2015</li>
-                                                <li class="exp-desc">Istanbul, Turkey</li>
-                                                <li class="exp-desc">
-                                                    <p class="text-justify">Helped the company to enhance their Business Intelligence needs by integrating in-house client solutions</p>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="grid-x">
-                                <div class="cell small-2">
-                                    <a href="https://marsh.com" target="_blank">
-                                        <img src="./assets/img/mmc-logo.png" class="clogo"/></a>
-                                </div>
-                                <div class="cell small-10">
-                                    <ul class="experience">
-                                        <li>Senior IT Executive
-                                            <ul class="experience-alt">
-                                                <li class="exp-comp">Marsh &amp; McLennan</li>
-                                                <li class="exp-desc text-italic">From Sep. 2012 to Sep. 2014, in Brussels, BELGIUM</li>
-                                                <li class="exp-desc text-justify">
-                                                    Succeeded on allowing the company to grow it's business by analysing needs and developping client products
-                                                </li>
-                                                <li class="exp-desc text-italic">From Oct. 2005 to Sep. 2012, in İstanbul, TURKEY</li>
-                                                <li class="exp-desc text-justify">
-                                                    Allowed the company to grow it's business and client satisfaction by developping in-house client solutions
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="cell small-6">
-                    <div class="grid-x">
-                        <div class="cell small-10">
-                            <p class="text-justify"><a href="http://international.epita.fr/" target="_blank">EPITA - Paris, FRANSA</a><br/>Master Degree on Computer Sciences and Engineering (2003 graduate).</p>
-                        </div>
-                        <div class="cell small-2" style="line-height:1.6rem;margin:auto 0;">
-                            <a href="http://international.epita.fr/" target="_blank"><img src="./assets/img/epita-logo-international.png" style="float:right;" /></a>
-                        </div>
                     </div>
-                    <div class="grid-x">
-                        <div class="cell small-12">
-                            <h4>Languages</h4>
-                        </div>
-                        <div class="cell small-12">
-                            <table class="unstriped">
-                                <tr>
-                                    <td>French<br/><span class="proficiency">Native or bilingual proficiency</span></td>
-                                    <td class="star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></td>
-                                </tr>
-                                <tr>
-                                    <td>English<br/><span class="proficiency">Full professional proficiency</span></td>
-                                    <td class="star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></td>
-                                </tr>
-                                <tr>
-                                    <td>Turkish<br/><span class="proficiency">Native or bilingual proficiency</span></td>
-                                    <td class="star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></td>
-                                </tr>
-                                <tr>
-                                    <td>Spanish<br/><span class="proficiency">Limited working proficiency</span></td>
-                                    <td class="star"><i class="fas fa-star"></i><i class="fas fa-star"></i></td>
-                                </tr>
-                            </table>
-                        </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h4>Skills</h4>
                     </div>
-                    <div class="grid-x">
-                        <div class="cell small-12">
-                            <h4>Skills</h4>
-                        </div>
-                        <div class="cell small-12">
-                            <p>General</p>
-                            <table class="unstriped">
-                                <tr>
-                                    <td>Problem Solving</td>
-                                    <td class="star">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Teamwork</td>
-                                    <td class="star">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Written Communication</td>
-                                    <td class="star">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>                                        
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Leadership</td>
-                                    <td class="star">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>                                        
-                                    </td>
-                                </tr>
-                            </table>
-                            <p>Technical *</p>
-                            <table class="unstriped">
-                                <tr>
-                                    <td>PHP</td>
-                                    <td class="star">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Vanilla JS/JQuery/Javascript</td>
-                                    <td class="star">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Ruby/Rails</td>
-                                    <td class="star">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>                                        
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>SQL/PL-SQL/NoSQL</td>
-                                    <td class="star">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>                                        
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>C#/.NET/.NET Core</td>
-                                    <td class="star">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>                                        
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>C/C++/Obj-C/Swift</td>
-                                    <td class="star">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>                                        
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Others</td>
-                                    <td class="star">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>                                        
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="cell small-12">
-                            <p class="text-justify">Even non exhaustive, I'm used to work with Linux, Unix, Mac OS, and Windows environments; Adapt, learn and develop in any language; Do Technical & Business Analysis, and much more...</p>
-                        </div>
+                    <div class="col-sm-12">
+                        <table class="unstriped">
+                            <tr>
+                                <td colspan="2" class="text-bold">General</td>
+                            </tr>
+                            <tr>
+                                <td class="skill-label">Problem Solving</td>
+                                <td class="star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="skill-label">Teamwork</td>
+                                <td class="star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="skill-label">Written Communication</td>
+                                <td class="star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>                                        
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="skill-label">Leadership</td>
+                                <td class="star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>                                        
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="text-bold">Technical *</td>
+                            </tr>
+                            <tr>
+                                <td class="skill-label">PHP/Java</td>
+                                <td class="star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="skill-label">Vanilla JS/JQuery/Javascript</td>
+                                <td class="star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="skill-label">Ruby/Rails/Perl/Python</td>
+                                <td class="star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>                                        
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="skill-label">SQL/PL-SQL/NoSQL</td>
+                                <td class="star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>                                        
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="skill-label">C#/.NET/.NET Core</td>
+                                <td class="star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>                                        
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="skill-label">C/C++/Obj-C/Swift</td>
+                                <td class="star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>                                        
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="skill-label">Others</td>
+                                <td class="star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>                                        
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-sm-12">
+                        <p class="text-justify proficiency">* Even non exhaustive, I'm used to work with Linux, Unix, Mac OS, and Windows environments; Adapt, learn and develop in any language; Do Technical & Business Analysis, and much more...</p>
                     </div>
                 </div>
             </div>
-            <div class="grid-x">
-                <div class="cell">
-                    <div class="footer">&copy; 2010 - <span id="cYear"></span> ASOVA.CO | BY-NC-SA </div>
-                    <script>
-                        $("#cYear").html((new Date()).getFullYear());
-                    </script>
-                </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="footer">&copy; 2010 - <span id="cYear"></span> ASOVA.CO | BY-NC-SA </div>
+                <script>
+                    $("#cYear").html((new Date()).getFullYear());
+                </script>
             </div>
         </div>
     </div>
