@@ -168,8 +168,15 @@ li.exp-desc {
 }
 
 .skill-label {
-  width: 350px;
+  width: 74%;
 }
+
+.star {
+  color: #62A9FF;
+  white-space: nowrap;
+  width: 26%;
+}
+
 
 .pr-1 {
   padding-right: 15px;
