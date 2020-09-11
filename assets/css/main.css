@@ -200,6 +200,7 @@ li.exp-desc {
 }
 table.unstriped tbody {
   border:0!important;
+  margin-left:-15px;
 }
 table.unstriped tbody tr {
   border-bottom:0!important;
