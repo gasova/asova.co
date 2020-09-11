@@ -64,7 +64,7 @@ ul.experiences > li {
 
 
 li.exp-comp {
-  font-weight:bold;
+  font-weight: 600!important;
 }
 
 li.exp-desc {
