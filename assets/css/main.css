@@ -194,9 +194,8 @@ li.exp-desc {
   justify-content: flex-start;
 }
 .idp {
-  display: flex;
-  object-fit: cover;
-  object-position: center;
+  width: 100px;
+  height: 100px;
 }
 table.unstriped tbody {
   border:0!important;
