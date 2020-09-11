@@ -117,7 +117,7 @@ li.exp-desc {
     display:none;
   }
   .contact-info {
-    display: flex;
+    text-align: right;
   }
   /*
   .container {
