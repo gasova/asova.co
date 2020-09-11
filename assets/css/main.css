@@ -72,6 +72,18 @@ li.exp-desc {
   font-weight:normal;
 }
 
+li.exp-period {
+  color: #ddd;
+  font-weight:normal;
+  
+}
+li.exp-period:before {
+  content:"\B7";
+  
+  
+}
+
+
 .wrapper {
   position:relative;
   top:0;
