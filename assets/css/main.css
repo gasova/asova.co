@@ -226,6 +226,7 @@ table.coord tbody td, table tbody th {
 }
 ul.experiences {
   margin-left: 0!important;
+  padding-left: 0;
 }
 @media print {
   a[href]:after {
