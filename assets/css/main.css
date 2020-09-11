@@ -208,6 +208,11 @@ table.unstriped tbody {
 table.unstriped tbody tr {
   border-bottom:0!important;
 }
+table.unstriped tbody tr td{
+  padding-top:7.5px;
+  padding-bottom:7.5px;
+}
+
 
 table.coord tbody td, table tbody th {
   padding: 0!important;
