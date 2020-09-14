@@ -14,6 +14,9 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var language = window.navigator.userLanguage || window.navigator.language;
+            if (language.substring(0, 2) == "en") {
+                window.location.href = "https://asova.co/en";
+            }
             if (language.substring(0, 2) == "fr") {
                 window.location.href = "https://asova.co/fr";
             }
