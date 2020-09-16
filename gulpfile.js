@@ -1,4 +1,4 @@
-const { gulp, parallel, watch, src, dest } = require('gulp');
+const { gulp, parallel, src, dest } = require('gulp');
 const concat = require('gulp-concat');
 const minify = require('gulp-minify');
 const sass = require('gulp-sass');
@@ -30,12 +30,5 @@ function sasslint(cb) {
   cb();
 }
 
-function watcher(cb) {
-  watch('src/js/**/*.js', jslint);
-  watch('src/sass/**/*.scss', sasslint);
-  cb();
-}
-
 exports.build = parallel(sasslint, jslint);
-exports.watch = parallel(watcher);
 exports.default = parallel(sasslint, jslint);
