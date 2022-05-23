@@ -78,6 +78,18 @@ li.exp-period {
   
 }
 
+@media print {
+  li.exp-desc {
+    color: #adadad;
+    font-weight:normal;
+  }
+
+  li.exp-period {
+    color: #ccc;
+    font-weight:normal;
+  }
+}
+
 .wrapper {
   position:relative;
   top:0;
