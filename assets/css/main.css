@@ -80,12 +80,12 @@ li.exp-period {
 
 @media print {
   li.exp-desc {
-    color: #adadad;
+    color: #ababab;
     font-weight:normal;
   }
 
   li.exp-period {
-    color: #ccc;
+    color: #aaa;
     font-weight:normal;
   }
 }
