@@ -1,0 +1,20 @@
+---
+layout: base.njk
+title: Etiketler
+permalink: /etiketler/index.html
+---
+<section class="page-hero">
+  {% include "hero-bg.njk" %}
+  <div class="container">
+    <p class="eyebrow reveal"><a href="/">← Tüm yazılar</a></p>
+    <h1 class="reveal">Etikete göre gözat</h1>
+  </div>
+</section>
+
+<section class="tags-page container">
+  <div class="tag-cloud">
+    {% for tag in collections.tagList %}
+    <a href="/etiketler/{{ tag }}/" class="post-tag post-tag-lg">{{ tag }}</a>
+    {% endfor %}
+  </div>
+</section>

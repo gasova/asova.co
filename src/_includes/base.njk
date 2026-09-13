@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% if title %}{{ title }} — {{ site.name }}{% else %}Gökçe Asova — Yazılım, sistemler ve iş çıkarmak üzerine notlar{% endif %}</title>
+<meta name="description" content="{{ description or 'Gökçe Asova\'nın kişisel blogu — full-stack mühendis ve BT yöneticisi; yazılım, altyapı ve zaman zaman yan projeler üzerine yazıyor.' }}">
+<meta name="author" content="{{ site.author }}">
+<link rel="canonical" href="https://asova.co{{ page.url }}">
+
+<!-- Safari Reader / paylaşım kartları için Open Graph -->
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:type" content="{% if date %}article{% else %}website{% endif %}">
+<meta property="og:title" content="{{ title or site.name }}">
+<meta property="og:description" content="{{ description or 'Gökçe Asova\'nın kişisel blogu.' }}">
+<meta property="og:url" content="https://asova.co{{ page.url }}">
+{% if date %}
+<meta property="article:published_time" content="{{ date | htmlDateString }}">
+<meta property="article:author" content="{{ site.author }}">
+{% endif %}
+<meta name="twitter:card" content="summary">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/print.css" media="print">
+<link rel="alternate" type="application/rss+xml" title="{{ site.name }} RSS Beslemesi" href="/feed.xml">
+</head>
+<body>
+
+<div class="noise-overlay"></div>
+
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a class="logo" href="/">GA<span class="dot">.</span></a>
+    <nav class="main-nav" id="main-nav">
+      <a href="/">Blog</a>
+      <a href="/hakkimda/">Hakkımda</a>
+      <a href="mailto:{{ site.email }}" class="nav-cta">Merhaba de</a>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+{{ content | safe }}
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>© <span id="year"></span> {{ site.author }}</span>
+    <span class="footer-sep">·</span>
+    <a href="/feed.xml">RSS</a>
+    <span class="footer-sep">·</span>
+    <span>{{ site.location }}</span>
+  </div>
+</footer>
+
+<script src="/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+---
+layout: base.njk
+title: Etiketler
+pagination:
+  data: collections.tagList
+  size: 1
+  alias: tag
+eleventyComputed:
+  permalink: "/etiketler/{{ tag }}/"
+---
+<section class="page-hero">
+  {% include "hero-bg.njk" %}
+  <div class="container">
+    <p class="eyebrow reveal"><a href="/">← Tüm yazılar</a></p>
+    <h1 class="reveal">#{{ tag }}</h1>
+  </div>
+</section>
+
+<section class="tags-page container">
+  <div class="post-list">
+    {% for post in collections.posts %}
+    {% if tag in post.data.tags %}
+    <article class="post-preview">
+      <a href="{{ post.url }}" class="post-preview-link">
+        <div class="post-preview-meta">
+          <time datetime="{{ post.date | htmlDateString }}">{{ post.date | postDate }}</time>
+        </div>
+        <h2>{{ post.data.title }}</h2>
+        <p>{{ post.data.description }}</p>
+      </a>
+    </article>
+    {% endif %}
+    {% endfor %}
+  </div>
+</section>

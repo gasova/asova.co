@@ -1,0 +1,37 @@
+---
+layout: base.njk
+title: Blog
+---
+<section class="hero hero-blog">
+  {% include "hero-bg.njk" %}
+  <div class="container">
+    <p class="eyebrow reveal">İstanbul / Ankara, Türkiye</p>
+    <h1 class="reveal">Yazılım, sistemler ve <span class="highlight">iş çıkarmak</span> üzerine notlar.</h1>
+    <p class="hero-lede reveal">
+      Ben Gökçe Asova — full-stack mühendis ve BT yöneticisiyim. Burada karşılaştığım
+      problemler, geliştirdiğim araçlar ve 20 yıllık yazılım geliştirme deneyiminin bana
+      öğrettikleri hakkında yazıyorum.
+    </p>
+  </div>
+</section>
+
+<section class="post-list container">
+  {% for post in collections.posts %}
+  <article class="post-preview reveal">
+    <a href="{{ post.url }}" class="post-preview-link">
+      <div class="post-preview-meta">
+        <time datetime="{{ post.date | htmlDateString }}">{{ post.date | postDate }}</time>
+        <span class="dot-sep">·</span>
+        <span>{{ post.templateContent | readingTime }} dk okuma</span>
+      </div>
+      <h2>{{ post.data.title }}</h2>
+      <p>{{ post.data.description }}</p>
+      {% if post.data.tags %}
+      <div class="post-preview-tags">
+        {% for tag in post.data.tags %}{% if tag != "posts" %}<span class="post-tag">{{ tag }}</span>{% endif %}{% endfor %}
+      </div>
+      {% endif %}
+    </a>
+  </article>
+  {% endfor %}
+</section>
