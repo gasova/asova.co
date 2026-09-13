@@ -339,7 +339,7 @@ a.post-tag:hover { border-color: var(--accent); color: var(--accent); }
     align-items: flex-start;
     padding: 20px 24px 28px;
     gap: 18px;
-    transform: translateY(-120%);
+    transform: translateY(calc(-100% - 100px));
     transition: transform 0.25s ease;
   }
   .main-nav.open { transform: translateY(0); }
