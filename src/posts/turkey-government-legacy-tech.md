@@ -5,9 +5,9 @@ description: Türkiye'nin resmi imza ve e-devlet altyapısının büyük kısmı
 date: 2026-09-13
 tags:
   - posts
-  - turkey
-  - security
-  - policy
+  - turkiye
+  - guvenlik
+  - politika
 ---
 Türk AKİS akıllı kartlarıyla ilgili teknik dokümantasyona ve kullanıcı deneyimlerine baktığınızda,
 "resmî" yolun modern, platform bağımsız, birinci taraf bir çözümden ne kadar uzak olduğu hemen

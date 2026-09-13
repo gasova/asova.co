@@ -5,7 +5,7 @@ description: Bankacılık, enerji ve startuplar boyunca yirmi yıldır süren m�
 date: 2026-03-02
 tags:
   - posts
-  - career
+  - kariyer
 ---
 Artık 20 yılı aşkın süredir yazılım geliştiriyorum — bankacılık, enerji, sigorta ve şimdi İnsan Kankları teknolojilerinde. Başlangıçta inanmadığım ama şimdi
 inandığım birkaç şey var.

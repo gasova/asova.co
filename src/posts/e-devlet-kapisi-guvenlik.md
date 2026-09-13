@@ -5,9 +5,9 @@ description: Tüm idari işlemleri tek bir portalda toplama fikri iyi olsa da, e
 date: 2026-09-14
 tags:
   - posts
-  - turkey
-  - security
-  - policy
+  - turkiye
+  - guvenlik
+  - politika
 ---
 Tüm resmi işlemleri — nüfus kayıtlarından vergi beyannamesine, sağlık raporlarından askerlik
 durum belgesine kadar — tek bir portalda toplama fikri gerçekten iyi bir fikir. e-Devlet

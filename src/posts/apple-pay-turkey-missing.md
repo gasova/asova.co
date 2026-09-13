@@ -5,9 +5,9 @@ description: Apple Pay'in Türkiye'de neden hiç hayata geçmediğine, iPhone'la
 date: 2026-09-12
 tags:
   - posts
-  - turkey
-  - policy
-  - fintech
+  - turkiye
+  - politika
+  - fintek
 ---
 Telefonla temassız ödeme gibi basit bir şeyin Türkiye'de hâlâ resmî olarak çalışmaması, bir
 mühendis olarak bakınca insanı "asıl sorun ne" diye düşündürüyor — çünkü sorun teknoloji değil.

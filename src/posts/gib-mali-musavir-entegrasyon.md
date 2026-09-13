@@ -5,9 +5,9 @@ description: Küçük işletmeler ve bireysel girişimciler için zorunlu olan m
 date: 2026-09-14
 tags:
   - posts
-  - turkey
-  - security
-  - fintech
+  - turkiye
+  - guvenlik
+  - fintek
 ---
 Türkiye'de küçük işletme sahipleri ve bireysel girişimciler için mali müşavir (SMMM) tutmak
 çoğu zaman zorunlu — vergi beyannamelerinin belirli bir usule göre, yetkili bir meslek mensubu
