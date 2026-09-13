@@ -46,7 +46,7 @@ veri ve ödeme akışlarını daha sıkı kontrol altında tutma isteği anlaş�
 kaldı: dışa kapanma refleksi, modern bir ödeme deneyimini içeri almak yerine dışarıda tutmayı
 seçti.
 
-Sonuç olarak Türkiyeli kullanıcılar kendi yamalarını kendileri üretti: Turkcell destekli
+Sonuç olarak Türkiye'deki kullanıcılar kendi yamalarını kendileri üretti: Turkcell destekli
 Paycell'in indirme sayısının 26 milyonu geçtiği söyleniyor; Akbank destekli Tosla da benzer bir
 rol üstleniyor. Çoğunlukla NFC dokunuşu yerine QR kod üzerinden çalışıyorlar. Ama bunlar bir
 ürün tercihinden çok, bir müzakere başarısızlığının geçici çözümü.
